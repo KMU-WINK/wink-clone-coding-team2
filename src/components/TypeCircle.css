@@ -1,3 +1,6 @@
+#testBox{
+    width: 520px;
+}
 html{
     font-size: 20px;
 }
@@ -31,7 +34,7 @@ html{
 }
 .TypeCircleWrap .TypeCircle .rank{
     display: inline-block;
-    width: 5rem;
+    width: 3rem;
     background-color: #4956ff;
     border-radius: 2rem;
 }
@@ -43,16 +46,22 @@ html{
 .TypeCircleWrap .TypeCircle .type{
     display: block;
     position: relative;
-    margin: 0.5rem 0;
-    font-size: 2rem;
+    padding: 0.5rem 0;
+    font-size: 1rem;
     color: #b5ef00;
 }
 .TypeCircleWrap .TypeCircle .type::after{
     content: "";
     position: absolute;
-    bottom: -0.5rem;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     width: 1.2rem;
     border-bottom: solid 1px white;
+}
+.TypeCircleWrap .TypeCircle .typeName{
+    display: block;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: #fff
 }
