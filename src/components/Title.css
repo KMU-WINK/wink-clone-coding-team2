@@ -1,0 +1,91 @@
+.main {
+    position: relative;
+    overflow: hidden;
+    background-color: #c9ff00;
+    height: 50%;
+}
+
+.title {
+    position: relative;
+    z-index: 1;
+}
+
+.computer {
+    opacity: 0;
+    position: absolute;
+    width: 50%;
+    top: 0;
+    right: 12%;
+    -webkit-animation: first .35s .25s cubic-bezier(.6,.23,.23,.85);
+    animation: first .35s .25s cubic-bezier(.6,.23,.23,.85);
+    animation-fill-mode: forwards !important;
+
+}
+
+@keyframes first {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateY(-100px) rotate(25deg);
+        transform: translateY(-100px) rotate(25deg);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0) rotate(0);
+        transform: translateY(0) rotate(0);
+    }
+
+}
+
+.note {
+    position: absolute;
+    width: 35%;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    -webkit-animation: last .35s .5s cubic-bezier(.6,.23,.23,.85);
+    animation: last .35s .5s cubic-bezier(.6,.23,.23,.85);
+    animation-fill-mode: forwards !important;
+}
+
+@keyframes last {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateX(50%);
+        transform: translateX(50%);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0) rotate(0);
+        transform: translateX(0) rotate(0);
+    }
+
+}
+
+
+.ipad {
+    position: absolute;
+    opacity: 0;
+    width: 35%;
+    right: 0;
+    bottom: 0;
+    -webkit-animation: second .35s .4s cubic-bezier(.6,.23,.23,.85);
+    animation: second .35s .4s cubic-bezier(.6,.23,.23,.85);
+    animation-fill-mode: forwards !important;
+}
+
+@keyframes second {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateY(70%) rotate(15deg);
+        transform: translateY(70%) rotate(15deg);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0) rotate(0);
+        transform: translateY(0) rotate(0);
+    }
+
+}
