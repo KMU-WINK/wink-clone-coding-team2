@@ -11,6 +11,7 @@ export function TypeCircle(){
                 <div>
                     <div class="wrapItem">
                         <span class="rank"><img src={lank1}></img></span>
+                        <span class="type">GRC</span>
                     </div>
                 </div>
             </li>
@@ -18,6 +19,7 @@ export function TypeCircle(){
                 <div>
                     <div class="wrapItem">
                         <span class="rank"><img src = {lank2}></img></span>
+                        <span class="type">GEC</span>
                     </div>
                 </div>
             </li>
@@ -25,6 +27,7 @@ export function TypeCircle(){
                 <div>
                     <div class="wrapItem">
                         <span class="rank"><img src = {lank3}></img></span>
+                        <span class="type">PEC</span>
                     </div>
                 </div>
             </li>
