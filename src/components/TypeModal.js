@@ -1,8 +1,11 @@
 import React from "react";
 import './TypeModal.css'
+import {ModalContent} from "./ModalContent";
 
-export function TypeModal() {
-    return <div className="modal">
+
+export function TypeModal({close}) {
+
+    return <div className="modal" onClick={close} >
                 <div className="close">
                     <img src="./images/close.png" alt=""/>
                 </div>
@@ -11,5 +14,9 @@ export function TypeModal() {
                 </div>
                 <div className="content">
                 </div>
+                <ModalContent src="type1"/>
             </div>;
+
 }
+
+

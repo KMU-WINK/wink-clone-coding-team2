@@ -1,15 +1,29 @@
-import React from "react";
+import React,{useState} from "react";
 import {Btn} from './components/Btn'
 import {Title} from './components/Title';
 import {TypeModal} from './components/TypeModal'
+// import {ModalContent} from "./components/ModalContent";
 
 function App() {
-  return (
-      <>
+
+    const [open, setOpen] = useState(false);
+
+    const clicked=()=>{
+        setOpen(true)
+    }
+
+    const close=()=>{
+        setOpen(false)
+    }
+
+    return (
+      <div>
         <Title/>
-        <Btn name="꼰대 유형 보기 >"/>
-        <TypeModal/>
-      </>
+        <Btn
+            clicked={clicked}
+        />
+          {open && <TypeModal close={close}/>}
+      </div>
   );
 }
 

@@ -1,0 +1,18 @@
+.content {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+}
+
+.imagecontent{
+    width: 25%;
+}
+
+.typeimage{
+    max-width: 100%;
+    height: auto;
+}
+
+.textcontent{
+    width: 70%;
+}
