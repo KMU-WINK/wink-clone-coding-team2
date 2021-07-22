@@ -1,7 +1,8 @@
 #testBox{
-    width: 520px;
+    width: 532px;
 }
 html{
+    
     font-size: 20px;
 }
 .TypeCircleWrap{
@@ -34,13 +35,14 @@ html{
 }
 .TypeCircleWrap .TypeCircle .rank{
     display: inline-block;
+    position: relative;
+    top: 0.2rem;
     width: 3rem;
     background-color: #4956ff;
     border-radius: 2rem;
 }
 .TypeCircleWrap .TypeCircle .rank > img{
     display: block;
-    margin: 0 auto;
     width: 100%;
 }
 .TypeCircleWrap .TypeCircle .type{
@@ -63,5 +65,20 @@ html{
     display: block;
     margin-top: 0.5rem;
     font-weight: bold;
-    color: #fff
+    color: #fff;
+    font-size: 1.5rem;
+}
+@media screen and (max-width: 770px){
+    .TypeCircleWrap .TypeCircle .typeName{
+        font-size: 1.2rem;
+    }
+}
+@media screen and (max-width: 576px){
+    .TypeCircleWrap .TypeCircle .rank{
+        width: 2.5rem;
+    }
+
+    .TypeCircleWrap .TypeCircle .typeName{
+        font-size: 1rem;
+    }
 }
