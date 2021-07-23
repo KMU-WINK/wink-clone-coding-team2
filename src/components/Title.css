@@ -1,7 +1,7 @@
 .main {
     position: relative;
     overflow: hidden;
-    background-color: #c9ff00;
+    background: linear-gradient(to bottom, #c5ff00, #d2ff00, #deff00, #eaff00, #f6ff00);
     height: 50%;
 }
 

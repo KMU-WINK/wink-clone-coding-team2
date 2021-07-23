@@ -12,9 +12,7 @@ export function TypeModal({close}) {
                 <div className="header">
                     <img src="./images/modal-title.png" alt=""/>
                 </div>
-                <div className="content">
-                </div>
-                <ModalContent src="type1"/>
+                <ModalContent/>
             </div>;
 
 }
