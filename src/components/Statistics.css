@@ -1,5 +1,9 @@
+body{
+    background-color: #333;
+}
 .Statistics{
-    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
 }
 .Statistics .TypesWrap{
     display: inline-block;
@@ -30,9 +34,6 @@
     width: 25%;
     height: 200px;
     background-color: #2e2e2e;
-}
-body{
-    background-color: black;
 }
 @media screen and (max-width: 770px){
     .Statistics .TypesWrap .Types{
