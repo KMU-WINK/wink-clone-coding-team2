@@ -1,0 +1,52 @@
+.Statistics{
+    width: 100%;
+}
+.Statistics .TypesWrap{
+    display: inline-block;
+    padding: 0;
+    width: 75%;
+}
+.Statistics .TypesWrap .Types{
+    display: inline-block;
+    padding: 0 4rem;
+    text-align: center;
+}
+.Statistics .TypesWrap .Types .MostTypes{
+    padding: 1rem 0;
+}
+.Statistics .TypesWrap .Types .MostTypes > img{
+    width: 100%;
+}
+.Statistics .TypesWrap .Types .BtnBox{
+    display: inline-block;
+    background-color: yellow;
+    margin: 2rem 0;
+}
+.Statistics .TypesWrap .Types .BtnBox .Btn{
+    color: blue;
+}
+.Statistics .UserLevel{
+    display: inline-block;
+    width: 25%;
+    height: 200px;
+    background-color: #2e2e2e;
+}
+body{
+    background-color: black;
+}
+@media screen and (max-width: 770px){
+    .Statistics .TypesWrap .Types{
+        padding: 0 2%;
+    }
+}
+@media screen and (max-width: 576px){
+    .Statistics .TypesWrap{
+        width: 100%;
+    }
+    .Statistics .UserLevel{
+        width: 100%;
+    }
+    .Statistics .TypesWrap .Types .BtnBox{
+        margin: 1rem 0;
+    }
+}
