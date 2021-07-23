@@ -1,14 +1,13 @@
 import React from "react";
 import {Btn} from './components/Btn'
-import { Participants } from "./components/Participants";
-import { AvgLV } from "./components/AvgLV";
+import { Statistics } from "./components/statistics";
 
 function App() {
   return (
       <>
         <Btn name="꼰대 유형 보기 >"/>
-        <Participants number = "3,113,693"/>
-        <AvgLV lv = "LV.2"/>
+        <Statistics url = "https://www.lllkkdti.com/content/images/main/participants-tit.png" number = "3,116,053"/>
+        <Statistics url = "https://www.lllkkdti.com/content/images/main/level-tit.png" number = "LV.2"/>
       </>
   );
 }
