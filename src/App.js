@@ -8,7 +8,6 @@ function App() {
       <>
         <Statistics></Statistics>
         <Btn name="꼰대 유형 보기 >"/>
-        <TypeCircles></TypeCircles>
       </>
   );
 }
