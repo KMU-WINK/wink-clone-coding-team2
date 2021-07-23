@@ -10,6 +10,13 @@
     box-sizing: border-box;
 }
 
+@media screen and (max-width: 768.98px){
+    .modal {
+        width: 80%;
+    }
+}
+
+
 .close {
     position: absolute;
     top: 2.5rem;
