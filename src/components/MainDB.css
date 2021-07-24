@@ -29,10 +29,9 @@ body{
 .MainDB .TypesWrap .Types .BtnBox .Btn{
     color: blue;
 }
-.MainDB .UserLevel{
+.MainDB .StatisticsWrap{
     display: inline-block;
     width: 25%;
-    height: 200px;
     background-color: #2e2e2e;
 }
 @media screen and (max-width: 770px){
