@@ -1,0 +1,77 @@
+.TypeCircleWrap{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.TypeCircleWrap .TypeCircle{
+    display: block;
+    width: 30%;
+    height: auto;
+}
+.TypeCircleWrap .TypeCircle > div{
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    background-color: #3e3e3e;
+    border-radius: 100%;
+}
+.TypeCircleWrap .TypeCircle .wrapItem{
+    display: block;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.TypeCircleWrap .TypeCircle .rank{
+    display: inline-block;
+    position: relative;
+    top: 0.2rem;
+    width: 3rem;
+    background-color: #4956ff;
+    border-radius: 2rem;
+}
+.TypeCircleWrap .TypeCircle .rank > img{
+    display: block;
+    width: 100%;
+}
+.TypeCircleWrap .TypeCircle .type{
+    display: block;
+    position: relative;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    color: #b5ef00;
+}
+.TypeCircleWrap .TypeCircle .type::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1.2rem;
+    border-bottom: solid 1px white;
+}
+.TypeCircleWrap .TypeCircle .typeName{
+    display: block;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: #fff;
+    font-size: 1.5rem;
+}
+@media screen and (max-width: 770px){
+    .TypeCircleWrap .TypeCircle .typeName{
+        font-size: 1.2rem;
+    }
+}
+@media screen and (max-width: 576px){
+    .TypeCircleWrap .TypeCircle .rank{
+        width: 2.5rem;
+    }
+
+    .TypeCircleWrap .TypeCircle .typeName{
+        font-size: 1rem;
+    }
+}

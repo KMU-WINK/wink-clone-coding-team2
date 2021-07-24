@@ -1,0 +1,53 @@
+body{
+    background-color: #333;
+}
+.MainDB{
+    max-width: 1080px;
+    margin: 0 auto;
+}
+.MainDB .TypesWrap{
+    display: inline-block;
+    padding: 0;
+    width: 75%;
+}
+.MainDB .TypesWrap .Types{
+    display: inline-block;
+    padding: 0 4rem;
+    text-align: center;
+}
+.MainDB .TypesWrap .Types .MostTypes{
+    padding: 1rem 0;
+}
+.MainDB .TypesWrap .Types .MostTypes > img{
+    width: 100%;
+}
+.MainDB .TypesWrap .Types .BtnBox{
+    display: inline-block;
+    background-color: yellow;
+    margin: 2rem 0;
+}
+.MainDB .TypesWrap .Types .BtnBox .Btn{
+    color: blue;
+}
+.MainDB .UserLevel{
+    display: inline-block;
+    width: 25%;
+    height: 200px;
+    background-color: #2e2e2e;
+}
+@media screen and (max-width: 770px){
+    .MainDB .TypesWrap .Types{
+        padding: 0 2%;
+    }
+}
+@media screen and (max-width: 576px){
+    .MainDB .TypesWrap{
+        width: 100%;
+    }
+    .MainDB .UserLevel{
+        width: 100%;
+    }
+    .MainDB .TypesWrap .Types .BtnBox{
+        margin: 1rem 0;
+    }
+}
