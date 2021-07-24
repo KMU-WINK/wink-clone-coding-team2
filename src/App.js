@@ -6,24 +6,24 @@ import {MainDB} from './components/MainDB'
 
 function App() {
 
-    const [open, setOpen] = useState(false);
-
-    const clicked=()=>{
-        setOpen(true)
-    }
-
-    const close=()=>{
-        setOpen(false)
-    }
+    // const [open, setOpen] = useState(false);
+    //
+    // const clicked=()=>{
+    //     setOpen(true)
+    // }
+    //
+    // const close=()=>{
+    //     setOpen(false)
+    // }
 
     return (
       <div>
         <Title/>
         <MainDB/>
-        <Btn
-            clicked={clicked}
-        />
-          {open && <TypeModal close={close}/>}
+        {/*<Btn*/}
+        {/*    clicked={clicked}*/}
+        {/*/>*/}
+        {/*  {open && <TypeModal close={close}/>}*/}
       </div>
     )
 
