@@ -1,0 +1,23 @@
+.statistics{
+    background-color: #2e2e2e;
+}
+
+.innerBox{
+    padding: 10% 0;
+}
+
+.number{
+    font-size: 1.9rem;
+    color: #4956ff;
+    text-align: center;
+}
+
+@media screen and (max-width: 768.98px){
+    .number {
+        font-size: 1.6rem;
+    }
+}
+
+.innerBox img{
+    width: 100%
+}
