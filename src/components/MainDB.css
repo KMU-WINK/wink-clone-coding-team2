@@ -22,13 +22,10 @@ body{
     width: 100%;
 }
 .MainDB .TypesWrap .Types .BtnBox{
-    display: inline-block;
-    background-color: yellow;
-    margin: 2rem 0;
+    display: flex;
+    margin-top: 5%;
 }
-.MainDB .TypesWrap .Types .BtnBox .Btn{
-    color: blue;
-}
+
 .MainDB .StatisticsWrap{
     width: 25%;
 }

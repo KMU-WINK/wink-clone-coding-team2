@@ -1,13 +1,19 @@
 .main {
     position: relative;
     overflow: hidden;
+    display: block;
     background: linear-gradient(to bottom, #c5ff00, #d2ff00, #deff00, #eaff00, #f6ff00);
     height: 50%;
+}
+
+img{
+    max-width: 100%;
 }
 
 .title {
     position: relative;
     z-index: 1;
+    margin-left: 5%;
 }
 
 .computer {

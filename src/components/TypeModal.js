@@ -7,10 +7,10 @@ export function TypeModal({close}) {
 
     return <div className="modal" onClick={close} >
                 <div className="close">
-                    <img src="./images/close.png" alt=""/>
+                    <img src="	https://www.lllkkdti.com/content/images/main/modal-type-closebtn.png" alt=""/>
                 </div>
                 <div className="header">
-                    <img src="./images/modal-title.png" alt=""/>
+                    <img src="https://www.lllkkdti.com/content/images/main/modal-type-tit.png" alt=""/>
                 </div>
                 <ModalContent/>
             </div>;
