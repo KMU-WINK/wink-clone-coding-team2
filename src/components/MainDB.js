@@ -1,12 +1,12 @@
 import React from "react"
-import "./Statistics.css"
+import "./MainDB.css"
 import {TypesWrap} from "./TypesWrap.js"
 
-export function Statistics(){
+export function MainDB(){
     return (
-        <div class="Statistics">
+        <div className="MainDB">
             <TypesWrap></TypesWrap>
-            <div class="UserLevel"></div>
+            <div className="UserLevel"></div>
         </div>
     )
 }

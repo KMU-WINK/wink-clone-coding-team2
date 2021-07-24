@@ -1,12 +1,12 @@
 import React from "react";
 import {Btn} from './components/Btn'
 import {TypeCircles} from './components/TypeCircles'
-import {Statistics} from './components/Statistics'
+import {MainDB} from './components/MainDB'
 
 function App() {
   return (
       <>
-        <Statistics></Statistics>
+        <MainDB/>
         <Btn name="꼰대 유형 보기 >"/>
       </>
   );
