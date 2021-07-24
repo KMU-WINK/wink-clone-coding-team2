@@ -4,14 +4,14 @@ body{
 .MainDB{
     max-width: 1080px;
     margin: 0 auto;
+    display: flex;
+    align-content: space-between;
 }
 .MainDB .TypesWrap{
-    display: inline-block;
     padding: 0;
     width: 75%;
 }
 .MainDB .TypesWrap .Types{
-    display: inline-block;
     padding: 0 4rem;
     text-align: center;
 }
@@ -30,9 +30,7 @@ body{
     color: blue;
 }
 .MainDB .StatisticsWrap{
-    display: inline-block;
     width: 25%;
-    background-color: #2e2e2e;
 }
 @media screen and (max-width: 770px){
     .MainDB .TypesWrap .Types{

@@ -1,11 +1,9 @@
 .statistics{
     background-color: #2e2e2e;
-    width: 210px;
-    height: 164.5px;
 }
 
 .innerBox{
-    padding-top: 35px;
+    padding: 10% 0;
 }
 
 .number{
@@ -14,7 +12,12 @@
     text-align: center;
 }
 
+@media screen and (max-width: 768.98px){
+    .number {
+        font-size: 1.6rem;
+    }
+}
+
 .innerBox img{
-    width: 210px;
-    height: 51px;
+    width: 100%
 }

@@ -16,12 +16,12 @@ export function Circle(props){
     }
 
     return(
-        <li class ="TypeCircle">
+        <li className="TypeCircle">
             <div>
-                <div class="wrapItem">
-                    <span class="rank"><img src={result} alt={props.name}></img></span>
-                    <span class="type">{props.english}</span>
-                    <strong class="typeName">{props.koreanTop}<br></br>{props.koreanBottom}</strong>
+                <div className="wrapItem">
+                    <span className="rank"><img src={result} alt={props.name}/></span>
+                    <span className="type">{props.english}</span>
+                    <strong className="typeName">{props.koreanTop}<br/>{props.koreanBottom}</strong>
                 </div>
             </div>
         </li>
