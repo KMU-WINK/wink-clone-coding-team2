@@ -7,7 +7,7 @@ function Type({type}) {
 
     return<div className="wrapContent">
             <div className="imageContent">
-                <img className="typeImage" src={`./images/${type.id}.png`} alt=""/>
+                <img className="typeImage" src={`../images/${type.id}.png`} alt=""/>
             </div>
 
             <div className="textContent">

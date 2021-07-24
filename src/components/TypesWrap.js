@@ -1,7 +1,7 @@
 import React from "react"
 import {TypeCircles} from "./TypeCircles.js"
 import {Btn} from "./Btn"
-import tit from "../images/statistics-tit.png"
+import tit from "../../public/images/statistics-tit.png"
 
 export function TypesWrap(){
     return(

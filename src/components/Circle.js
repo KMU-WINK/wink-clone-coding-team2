@@ -1,7 +1,7 @@
 import React from "react"
-import rank1 from "../images/statistics-lank-01.png"
-import rank2 from "../images/statistics-lank-02.png"
-import rank3 from "../images/statistics-lank-03.png"
+import rank1 from "./images/statistics-lank-01.png"
+import rank2 from "./images/statistics-lank-02.png"
+import rank3 from "./images/statistics-lank-03.png"
 
 export function Circle(props){
     let result;
