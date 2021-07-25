@@ -11,6 +11,7 @@
     font-style: normal;
 }
 .share{
+    position: relative;
     width: 500px;
     height: 84px;
     display: flex;
@@ -19,6 +20,7 @@
     background: #f2ff0442;
     border-radius: 3px;
     border: solid 0.8px rgba(0, 0, 0, 0.397);
+    margin: 0 2%;
 }
 .share__text{
     width: 130px;
