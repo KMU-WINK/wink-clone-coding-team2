@@ -1,3 +1,7 @@
+.MainDBWrap {
+    background-color: #333;
+}
+
 .MainDB{
     max-width: 1080px;
     margin: 0 auto;
