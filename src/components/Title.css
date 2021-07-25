@@ -4,6 +4,7 @@
     display: block;
     background: linear-gradient(to bottom, #c5ff00, #d2ff00, #deff00, #eaff00, #f6ff00);
     height: 50%;
+    text-align: center;
 }
 
 img{
@@ -11,15 +12,15 @@ img{
 }
 
 .title {
+    display: inline-block;
     position: relative;
     z-index: 1;
-    margin-left: 5%;
 }
 
 .computer {
     opacity: 0;
     position: absolute;
-    width: 50%;
+    width: 35%;
     top: 0;
     right: 12%;
     -webkit-animation: first .35s .25s cubic-bezier(.6,.23,.23,.85);
@@ -73,7 +74,7 @@ img{
 .ipad {
     position: absolute;
     opacity: 0;
-    width: 35%;
+    width: 25%;
     right: 0;
     bottom: 0;
     -webkit-animation: second .35s .4s cubic-bezier(.6,.23,.23,.85);
