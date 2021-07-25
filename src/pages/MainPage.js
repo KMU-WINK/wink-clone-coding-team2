@@ -1,14 +1,14 @@
 import React from "react";
 import {Title} from '../components/Title';
 import {MainDB} from '../components/MainDB'
-// import { BrowserRouter as Router, Route, Switch, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export function MainPage() {
 
     return <>
         <Title/>
         <MainDB/>
-        {/*<button><NavLink to="/Test">Test</NavLink></button>*/}
+        <button><NavLink to="/Test">Test</NavLink></button>
     </>
 
 }

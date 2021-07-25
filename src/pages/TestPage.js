@@ -1,9 +1,10 @@
 import React from "react";
+import {TestTitle} from "../components/TestTitle";
 
 export function TestPage() {
 
     return <>
-        <h2>Testpage</h2>
+        <TestTitle/>
     </>
 
 }
