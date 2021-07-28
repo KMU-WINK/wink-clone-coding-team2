@@ -1,11 +1,13 @@
 import React from "react"
-import "./Question.css"
+import "./QuestionBox.css"
 import {QuestionList} from "./QuestionList"
+import {QuestionFlex} from "./QuestionFlex"
 
-export function Question({quest}){
+function Question({quest, order}){
     return(
         <div className="Question">
-            <strong className="text">{quest.index}. {quest.quest.question}</strong>
+            <strong className="text">{order}. {quest.question}</strong>
+            <QuestionFlex bold={quest.answer_bold} answer={quest.answer} />
         </div>
     )
 }
@@ -14,7 +16,7 @@ export function QuestionBox(){
     return(
         <div className="QuestionBox">
             {QuestionList.map((quest, index) => (
-                <Question index={index+1} quest={quest}/>
+                <Question quest={quest} order={index+1}/>
             ))}
         </div>
     )

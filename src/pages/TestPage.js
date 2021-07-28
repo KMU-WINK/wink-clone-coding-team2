@@ -1,12 +1,12 @@
 import React from "react";
 import {TestTitle} from "../components/TestTitle";
-import {Question} from "../components/Question";
+import {QuestionBox} from "../components/Question/QuestionBox";
 
 export function TestPage() {
 
     return <>
         <TestTitle/>
-        <Question/>
+        <QuestionBox/>
     </>
 
 }

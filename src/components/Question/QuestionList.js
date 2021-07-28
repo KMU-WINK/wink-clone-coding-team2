@@ -1,6 +1,5 @@
 const answer_default = ["전혀 그렇지 않다", "그렇지 않다", "그렇다", "매우 그렇다"];
 export const QuestionList = [
-
     {
         question : "혼자 여가 시간을 보내는 것을 선호한다.",
         answer_bold : [],
