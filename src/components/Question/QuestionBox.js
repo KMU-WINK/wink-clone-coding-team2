@@ -6,8 +6,8 @@ import {QuestionFlex} from "./QuestionFlex"
 function Question({quest, order}){
     return(
         <div className="Question">
-            <strong className="text">{order}. {quest.question}</strong>
-            <QuestionFlex bold={quest.answer_bold} answer={quest.answer} />
+            <div className="text">{order}. <b>{quest.question}</b></div>
+            <QuestionFlex bold={quest.answer_bold} answer={quest.answer} order={order}/>
         </div>
     )
 }

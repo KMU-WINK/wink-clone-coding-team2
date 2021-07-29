@@ -1,12 +1,18 @@
 import React from "react"
+import "./Answer.css"
 
-export function Answer({bold, answer}){
+export function Answer({bold, answer, order}){
     return(
-        <div className="Answer">
-            <div className="RadioCircle"></div>
-            <span>{bold}</span>
-            <br></br>
-            {answer}
-        </div>
+        <label className="Answer">
+            <input type="radio" name={order}></input>
+            <div className="RadioCircle">
+                <div></div>
+            </div>
+            <div className="paragraph">
+                <b>{bold}</b>
+                {answer}
+            </div>
+
+        </label>
     )
 }
