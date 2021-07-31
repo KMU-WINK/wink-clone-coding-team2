@@ -1,5 +1,15 @@
+.PageWrap{
+    background-color: #f3f3f3;
+    text-align: center;
+    font-family:'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
 .QuestionBox{
-    padding: 0 2rem;
+    display: inline-block;
+    background-color: white;
+    max-width: 1080px;
+    margin: 0 15px;
 }
 .QuestionBox .Question{
     display: block;

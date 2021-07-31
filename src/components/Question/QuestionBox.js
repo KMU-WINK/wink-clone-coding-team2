@@ -14,9 +14,13 @@ function Question({quest, order}){
 
 export function QuestionBox(){
     return(
-        <div className="QuestionBox">
-            {QuestionList.map((quest, index) => (
-                <Question quest={quest} order={index+1}/>
+        <div className="PageWrap">
+            {QuestionList.map((questbox, i) => (
+                <div className="QuestionBox" style={i === 0 ? {display: "inline-block"} : {display: "none"}}>
+                    {questbox.map((quest, index) => (
+                    <Question quest={quest} order={i*11 + index+1} key={index}/>
+                ))}
+                </div>
             ))}
         </div>
     )
