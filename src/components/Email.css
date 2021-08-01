@@ -1,0 +1,15 @@
+.footer-label{
+    display: block;
+    margin: 2.5rem auto 2rem auto;
+    text-align: center;
+}
+
+.footer-label img{
+    width:1.75rem;
+    max-width: 100%;
+}
+
+.text{
+    font-size: 1.1rem;
+    margin-left: 1rem;
+}
