@@ -1,0 +1,22 @@
+.control-box{
+    margin-top:3rem;
+}
+
+.backbtn{
+    margin-left: 2rem;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    width: 4rem;
+    background-color: #b2b2b2;
+    border-radius: 2rem;
+}
+
+.test-step{
+    float:right;
+    margin-right:2rem;
+}
+
+.current-step{
+    color: #4956ff !important;
+}
