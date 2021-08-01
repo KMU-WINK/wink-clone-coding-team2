@@ -1,15 +1,19 @@
 import React from "react";
-import {Btn} from './components/Btn'
-import { Statistics } from "./components/statistics";
+import { BrowserRouter as Router, Route} from 'react-router-dom';
+import { MainPage } from './pages/MainPage';
+import { TestPage } from './pages/TestPage';
+
 
 function App() {
-  return (
-      <>
-        <Btn name="꼰대 유형 보기 >"/>
-        <Statistics url = "https://www.lllkkdti.com/content/images/main/participants-tit.png" number = "3,116,053"/>
-        <Statistics url = "https://www.lllkkdti.com/content/images/main/level-tit.png" number = "LV.2"/>
-      </>
-  );
-}
 
+    return (
+      <div>
+          <Router>
+              <Route exact path={"/"} component={MainPage}/>
+              <Route exact path={"/Test"} component={TestPage}/>
+          </Router>
+      </div>
+    )
+
+}
 export default App;

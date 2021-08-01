@@ -1,0 +1,28 @@
+.startBtn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 90px;
+    background-color: #4956FF;
+    cursor: pointer;
+    color: white;
+    border-radius: 3px;
+    margin: 0 2%;
+}
+.startBtn span:nth-child(1){
+    font-size: 20px;
+    height: 20px;
+    margin-bottom: 5px;
+    font-weight: 540;
+}
+.startBtn span:nth-child(2){
+    font-size: 24px;
+    height: 24px;
+    font-weight: bold;
+}
+
+a:-webkit-any-link {
+    text-decoration: none;
+}

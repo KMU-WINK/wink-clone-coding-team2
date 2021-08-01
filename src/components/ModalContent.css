@@ -1,0 +1,35 @@
+.content {
+    overflow-y: scroll;
+    height: 24rem;
+}
+
+.wrapContent{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    border-bottom: 1px solid #c6c6c6;
+}
+.content::-webkit-scrollbar {
+    width: 5px;
+}
+
+.content::-webkit-scrollbar-thumb {
+    background: black;
+}
+.content::-webkit-scrollbar-track {
+    background-color: #f7f7f7;
+}
+
+.imageContent{
+    width: 25%;
+}
+
+.typeImage{
+    max-width: 100%;
+    height: auto;
+
+}
+
+.textContent{
+    width: 70%;
+}
