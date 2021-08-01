@@ -1,0 +1,28 @@
+.snsbox{
+    display:block;
+    margin: 1rem auto 1.5rem auto;
+    position: relative;
+    width: 22rem;
+}
+
+.snsbtn{
+    position: absolute;
+    width: 22.77%;
+    height: 100%;
+    display: inline-block;
+    -webkit-tap-highlight-color: transparent;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.facebook{
+    left: 30.37%;
+}
+
+.youtube{
+    left: 53.15%;
+}
+
+.insta{
+    left: 75.92%;
+}
