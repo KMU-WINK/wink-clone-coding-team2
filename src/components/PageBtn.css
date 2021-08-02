@@ -1,0 +1,32 @@
+.TestFooter{
+    -ms-user-select: none; 
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    height: 5rem;
+}
+
+.BeforePageBtn, .AfterPageBtn{
+    position: fixed;
+    bottom:0;
+    width: 980px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px;
+    font-weight: 700;
+    height: 4.5rem;
+    color: white;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.BeforePageBtn{background-color: #7f7f7f;}
+
+.AfterPageBtn{
+    cursor: pointer;
+    background-color: #4956ff;
+}
