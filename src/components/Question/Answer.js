@@ -1,10 +1,11 @@
 import React from "react"
 import "./Answer.css"
 
-export function Answer({bold, answer, order, select, Radio, sendRadio}){
+export function Answer({bold, answer, order, select, sendRadio, changeInputs}){
     const radioChange = (event) => {
         console.log(event.target.value);
         sendRadio(event.target.value);
+        changeInputs(event);
     }
     return(
         <label className="Answer">

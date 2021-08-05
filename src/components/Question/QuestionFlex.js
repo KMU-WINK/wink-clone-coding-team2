@@ -2,42 +2,21 @@ import React, {useState} from "react"
 import "./QuestionFlex.css"
 import {Answer} from "./Answer"
 
-export function QuestionFlex({bold, answer, order}){
+export function QuestionFlex({bold, answer, order, changeInputs}){
     const [Radio, setRadio] = useState(null);
     return(
         <div className="QuestionFlex">
-            <Answer 
-            bold={bold[0]} 
-            answer={answer[0]} 
-            order={order} 
-            select={1}
-            Radio={Radio}
-            sendRadio={setRadio}
-            />
-            <Answer 
-            bold={bold[1]} 
-            answer={answer[1]} 
-            order={order} 
-            select={2}
-            Radio={Radio}
-            sendRadio={setRadio}
-            />
-            <Answer 
-            bold={bold[2]} 
-            answer={answer[2]} 
-            order={order} 
-            select={3}
-            Radio={Radio}
-            sendRadio={setRadio}
-            />
-            <Answer 
-            bold={bold[3]} 
-            answer={answer[3]} 
-            order={order} 
-            select={4}
-            Radio={Radio}
-            sendRadio={setRadio}
-            />
+            {[0, 1, 2, 3].map((i) => (
+                <Answer 
+                bold={bold[i]} 
+                answer={answer[i]} 
+                order={order} 
+                select={i+1}
+                sendRadio={setRadio}
+                changeInputs={changeInputs}
+                />
+            ))}
+            
         </div>
     )
 }
