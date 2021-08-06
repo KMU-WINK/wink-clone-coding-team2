@@ -1,0 +1,27 @@
+.PageWrap{
+    background-color: #f3f3f3;
+    text-align: center;
+    font-family:'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+.QuestionBox{
+    display: inline-block;
+    background-color: white;
+    max-width: 1080px;
+    margin: 0 15px;
+}
+.QuestionBox .Question{
+    display: block;
+    padding: 4rem 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+.QuestionBox .Question .text{
+    display: block;
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 1.3rem;
+}
+.QuestionBox .Question .text > b{
+    font-weight: bolder;
+}

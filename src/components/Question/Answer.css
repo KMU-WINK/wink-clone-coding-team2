@@ -1,0 +1,46 @@
+.Answer{
+    margin: 0 1.2rem;
+    width: 12%;
+    cursor: pointer;
+}
+.Answer > input{
+    display: none;
+}
+.Answer .RadioCircle{
+    position: relative;
+    width: 75%;
+    height: auto;
+    margin: 0 auto;
+    background-color: #eee;
+    border-radius: 100%;
+}
+.Answer .RadioCircle::before{
+    content: "";
+    position: absolute;
+    border-radius: 100%;
+    width: 45%;
+    height: 45%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    
+}
+.Answer .RadioCircle > div{
+    padding-bottom: 100%;
+}
+.Answer .paragraph{
+    margin-top: 0.5rem;
+    text-align: center;
+    font-size: 0.8rem;
+}
+.Answer > input:checked + .RadioCircle{
+    background-color: #4956ff;
+}
+
+@media screen and (max-width: 576px){
+    .Answer{
+        width: 22%;
+        margin: 0 1%;
+    }
+}

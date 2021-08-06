@@ -1,0 +1,31 @@
+.ControlWrap{
+    background-color: #f3f3f3;
+    padding-left:15px;
+    padding-right:15px;
+}
+
+.control-box{
+    padding: 3rem 0;
+    background-color: white;
+    max-width: 1080px;
+    margin:0 auto;
+}
+
+.backbtn{
+    margin-left: 2rem;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    width: 4rem;
+    background-color: #b2b2b2;
+    border-radius: 2rem;
+}
+
+.test-step{
+    float:right;
+    margin-right:2rem;
+}
+
+.current-step{
+    color: #4956ff !important;
+}
