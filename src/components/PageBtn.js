@@ -1,5 +1,7 @@
-import React from "react"
+import React, {useState} from "react"
 import "./PageBtn.css"
+import { useDispatch } from "react-redux";
+import { pushResult } from "./modules/result";
 
 function BeforePageBtn(){
     return(
@@ -8,8 +10,13 @@ function BeforePageBtn(){
 }
 
 function AfterPageBtn(){
+    let page = 1;
+    const dispatch = useDispatch();
+    const buttonClick = () => {
+        dispatch(pushResult(page)); // page 변수에 따라 결과가 달라짐
+    };
     return(
-        <a className = "AfterPageBtn">다음 설문 진행하기 →</a>
+        <a className = "AfterPageBtn" value="1" onClick={buttonClick}>다음 설문 진행하기 →</a>
     )
 }
 

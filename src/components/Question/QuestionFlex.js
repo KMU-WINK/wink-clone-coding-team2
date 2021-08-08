@@ -2,7 +2,7 @@ import React, {useState} from "react"
 import "./QuestionFlex.css"
 import {Answer} from "./Answer"
 
-export function QuestionFlex({bold, answer, order, changeInputs}){
+export function QuestionFlex({bold, answer, order}){
     const [Radio, setRadio] = useState(null);
     return(
         <div className="QuestionFlex">
@@ -13,7 +13,6 @@ export function QuestionFlex({bold, answer, order, changeInputs}){
                 order={order} 
                 select={i+1}
                 sendRadio={setRadio}
-                changeInputs={changeInputs}
                 />
             ))}
             
