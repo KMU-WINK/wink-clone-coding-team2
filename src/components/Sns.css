@@ -1,8 +1,8 @@
 .snsbox{
     display:block;
-    margin: 1rem auto 1.5rem auto;
     position: relative;
     width: 22rem;
+    margin: 20px 0;
 }
 
 .snsbtn{
