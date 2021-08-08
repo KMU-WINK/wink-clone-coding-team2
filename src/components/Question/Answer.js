@@ -1,11 +1,15 @@
 import React from "react"
 import "./Answer.css"
+import { useSelector, useDispatch } from "react-redux";
+import { updateInputs } from "../modules/result";
 
-export function Answer({bold, answer, order, select, sendRadio, changeInputs}){
+
+export function Answer({bold, answer, order, select, sendRadio}){
+    const dispatch = useDispatch();
     const radioChange = (event) => {
-        console.log(event.target.value);
-        sendRadio(event.target.value);
-        changeInputs(event);
+        const {name, value} = event.target;
+        sendRadio(value);
+        dispatch(updateInputs(parseInt(name%11), parseInt(name/11) + 1, value));
     }
     return(
         <label className="Answer">
