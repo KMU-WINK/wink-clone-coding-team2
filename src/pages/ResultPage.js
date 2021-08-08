@@ -8,7 +8,7 @@ export function ResultPage() {
 
     return <>
         <ResultTitle/>
-        <ResultView/>
+        <ResultView type={"PRC"} level={"2"}/>
         <Article/>
         <ButtonWrap/>
 </>
