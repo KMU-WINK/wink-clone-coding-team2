@@ -1,58 +1,50 @@
 import React from "react"
 import "./PageBtn.css"
 
-function BeforePageBtn(){
+// let nonselectedcount = -1;
+
+// function CheckedQuestions(inputs){
+//     nonselectedcount = 0;
+//     for(let i =0; i < inputs.length; i++){
+//         if(inputs[i]===0){
+//             nonselectedcount = nonselectedcount + 1;
+//         }
+//     }
+// } // 선택 안 된 항목 개수 계산하는 함수
+
+// function NextPage(page){
+//     if(page === 3){
+//         // resultpage로 넘어감
+//     } else{
+//         // 설정 초기화
+//         nonselectedcount = -1;
+//     }
+// }
+
+function BeforePageBtn(nonselectedcount){
     return(
-        <a className = "BeforePageBtn">11개의 항목이 남았습니다.</a>
+        <div className = "BeforePageBtn">{nonselectedcount}개의 항목이 남았습니다.</div>
     )
 }
 
 function AfterPageBtn(){
     return(
-        <a className = "AfterPageBtn">다음 설문 진행하기 →</a>
+        <div className = "AfterPageBtn">다음 설문 진행하기 →</div>
     )
 }
 
-export function PageBtn(){
-    return(
-        <div className="TestFooter"><AfterPageBtn/></div>
-    )
+export function PageBtn({nonselectedcount, inputscount}){
+    console.log("pagebtn")
+    if(nonselectedcount === 0){
+        return(
+            <div className="TestFooter"><AfterPageBtn/></div>
+        )
+    } else{
+        if(nonselectedcount !== inputscount || nonselectedcount !== -1){
+            return(
+                <div className="TestFooter"><BeforePageBtn nonselectedcount={nonselectedcount}/></div>
+            )
+        }
+    }
+    console.log(nonselectedcount)
 }
-
-
-// const selectedcount = 0;
-// const page = 0;
-// const nonselectedcount = 0;
-
-// function CheckedQuestions(){
-//     if(page==0){
-//         for(let i =0; i<11; i++){
-//             if(버튼 체크확인 조건문) selectedcount = selectedcount + 1;
-//         }
-//     }
-// }
-
-// function RemainingQuestions(){
-//     CheckedQuestions();
-//     if(page!=3){
-//         nonselectedcount = 11-selectedcount;
-//         return(<span>{nonselectedcount}</span>
-//         )
-//     } else{
-//         nonselectedcount = 10-selectedcount;
-//         return(<span>{nonselectedcount}</span>
-//         )
-//     }
-// }
-
-// export function PageBtn(){
-//     if(nonselectedcount != 0){
-//         return(
-//             <div className="TestFooter"><AfterPageBtn/></div>
-//         )
-//     } else{
-//         return(
-//             <div className="TestFooter"><BeforePageBtn/></div>
-//         )
-//     }
-// }
