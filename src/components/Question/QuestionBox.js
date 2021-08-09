@@ -18,7 +18,7 @@ function Question({quest, order, changeInputs}){
     )
 }
 
-let nonselectedcount = -1;
+const nonselectedcount = -1;
 
 function CheckedQuestions(inputs){
     nonselectedcount = 0;
@@ -39,7 +39,7 @@ export function QuestionBox(){
     const resetInputs = () => {
         setInputs([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
     }
-    let inputscount = inputs.length
+    const inputscount = inputs.length
     const test = ({nonselectedcount, inputscount}) =>{
         console.log(nonselectedcount)
         return(<PageBtn nonselectedcount={nonselectedcount} inputscount={inputscount}/>)
@@ -60,7 +60,7 @@ export function QuestionBox(){
             ))}
             {CheckedQuestions(inputs)}
             {console.log(nonselectedcount)}
-            <PageBtn nonselectedcount ={nonselectedcount} inputscount = {inputscount}/>
+            <PageBtn nonselectedcount = {nonselectedcount} inputscount = {inputscount}/>
         </div>
     )
 }

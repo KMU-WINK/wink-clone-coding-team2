@@ -1,5 +1,6 @@
 import React from "react"
 import "./PageBtn.css"
+import PropTypes from "prop-types"
 
 // let nonselectedcount = -1;
 
@@ -48,3 +49,8 @@ export function PageBtn({nonselectedcount, inputscount}){
     }
     console.log(nonselectedcount)
 }
+
+// PageBtn.proptype = {
+//     nonselectedcount : PropTypes.number,
+//     inputscount : PropTypes.number
+// }
