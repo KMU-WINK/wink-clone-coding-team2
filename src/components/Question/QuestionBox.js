@@ -18,17 +18,6 @@ function Question({quest, order, changeInputs}){
     )
 }
 
-const nonselectedcount = -1;
-
-function CheckedQuestions(inputs){
-    nonselectedcount = 0;
-    for(let i =0; i < inputs.length; i++){
-        if(inputs[i]===0){
-            nonselectedcount = nonselectedcount + 1;
-        }
-    }
-} // 선택 안 된 항목 개수 계산하는 함수
-
 export function QuestionBox(){
     const [inputs, setInputs] = useState([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
     const changeInputs = (e) => {
@@ -39,10 +28,15 @@ export function QuestionBox(){
     const resetInputs = () => {
         setInputs([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
     }
-    const inputscount = inputs.length
-    const test = ({nonselectedcount, inputscount}) =>{
-        console.log(nonselectedcount)
-        return(<PageBtn nonselectedcount={nonselectedcount} inputscount={inputscount}/>)
+    var nonselectedcount = -1
+    var inputscount = inputs.length
+    function CheckedQuestions(inputs){
+        nonselectedcount = 0;
+        for(let i =0; i < inputs.length; i++){
+            if(inputs[i]===0){
+                nonselectedcount = nonselectedcount + 1;
+            }
+        }
     }
     return(
         <div className="PageWrap">

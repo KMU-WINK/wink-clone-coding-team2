@@ -22,7 +22,7 @@ import PropTypes from "prop-types"
 //     }
 // }
 
-function BeforePageBtn(nonselectedcount){
+function BeforePageBtn({nonselectedcount}){
     return(
         <div className = "BeforePageBtn">{nonselectedcount}개의 항목이 남았습니다.</div>
     )
@@ -50,7 +50,11 @@ export function PageBtn({nonselectedcount, inputscount}){
     console.log(nonselectedcount)
 }
 
-// PageBtn.proptype = {
-//     nonselectedcount : PropTypes.number,
-//     inputscount : PropTypes.number
-// }
+PageBtn.PropTypes={
+    nonselectedcount: PropTypes.number,
+    inputscount: PropTypes.number
+}
+
+BeforePageBtn.prototype={
+    nonselectedcount: PropTypes.number
+}
