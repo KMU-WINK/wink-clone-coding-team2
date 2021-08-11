@@ -22,9 +22,8 @@ function AfterPageBtn(){
 
 export function PageBtn(){
     const dispatch = useDispatch();
-    var page = useSelector(initiolState => initiolState.page);
+    const page = useSelector(state => state.result.page);
     dispatch(updatenonselected(page));
-    console.log("pagebtn");
     var nonselectedcount = useSelector(initiolState => initiolState.nonselectedcount);
     var pageinputscount = useSelector(initiolState => initiolState.pageinputscount);
     if(page !== 0){

@@ -89,14 +89,15 @@ export default function result(state = initiolState, action){
                         fourth: [...state.fourth.slice(0, action.index-1), parseInt(action.value), ...state.fourth.slice(action.index, 11)]
                     };
             }
-            console.log(state);
         case UPDATE_NONSELECTED:
+            console.log(state);
             let count = 0;
             switch(action.page){
                 case 1:
                     for(let i=0; i<state.first.length; i++){
                         if(state.first[i] === 0){count = count + 1}
                     }
+                    console.log(count);
                     if(0 < count < 11){
                         return{
                             ...state,
@@ -172,6 +173,5 @@ export default function result(state = initiolState, action){
             }
         default:
             return state;
-        
     }
 }
