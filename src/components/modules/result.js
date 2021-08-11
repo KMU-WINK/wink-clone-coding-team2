@@ -106,7 +106,7 @@ export default function result(state = initiolState, action){
                             ...state,
                             nonselectedcount: count,
                             pageinputscount: state.first.length,
-                            page:action.page
+                            page: action.page
                         }
                     } else{
                         return{

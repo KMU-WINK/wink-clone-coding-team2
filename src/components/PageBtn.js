@@ -46,9 +46,6 @@ export function PageBtn(){
             <div></div>
         )
     }
-    console.log(page);
-    console.log(nonselectedcount);
-    console.log(pageinputscount);
 }
 
 

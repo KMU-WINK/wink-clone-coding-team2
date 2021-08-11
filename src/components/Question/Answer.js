@@ -14,6 +14,8 @@ export function Answer({bold, answer, order, select, sendRadio}){
         dispatch(updateInputs(parseInt(tmp%11), parseInt(tmp/11) + 1, value));
         dispatch(updatenonselected(page));
     }
+    const t = useSelector(state => state.result.first);
+    console.log(t);
     return(
         <label className="Answer">
             <input type="radio" name={order} value={select} onChange={(e) => radioChange(e)}></input>
