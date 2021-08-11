@@ -15,7 +15,7 @@ const UPDATE_NONSELECTED = 'result/UPDATE_NONSELECTED'
 export const pushResult = (page) => ({ type: PUSH_RESULT, page});
 export const popResult = () => ({ type: POP_RESULT});
 export const updateInputs = (index, page, value) => ({ type: UPDATE_INPUTS, index, page, value})
-export const updatenonselected = () => ({type: UPDATE_NONSELECTED})
+export const updatenonselected = (page) => ({type: UPDATE_NONSELECTED, page})
 
 /*초기 상태*/
 const initiolState = {
@@ -24,10 +24,8 @@ const initiolState = {
     second: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     third: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     fourth: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    firstnonselected: -1,
-    secondnonselected: -1,
-    thirdnonselected: -1,
-    fourthnonselected: -1,
+    nonselectedcount: -1,
+    pageinputscount: 0,
 }
 
 /*리듀서*/
@@ -101,9 +99,16 @@ export default function result(state = initiolState, action){
                     if(0 < count < 11){
                         return{
                             ...state,
-                            firstnonselected: count
+                            nonselectedcount: count,
+                            pageinputscount: state.first.length
                         }
-                    };
+                    } else{
+                        return{
+                            ...state,
+                            nonselectedcount: -1,
+                            pageinputscount: 0
+                        }
+                    }
                 case 2:
                     for(let i=0; i<state.second.length; i++){
                         if(state.first[i] === 0){count = count + 1}
@@ -111,9 +116,16 @@ export default function result(state = initiolState, action){
                     if(0 < count < 11){
                         return{
                             ...state,
-                            secondnonselected: count
+                            nonselectedcount: count,
+                            pageinputscount: state.first.length
                         }
-                    };
+                    } else{
+                        return{
+                            ...state,
+                            nonselectedcount: -1,
+                            pageinputscount: 0
+                        }
+                    }
                 case 3:
                     for(let i=0; i<state.third.length; i++){
                         if(state.first[i] === 0){count = count + 1}
@@ -121,9 +133,16 @@ export default function result(state = initiolState, action){
                     if(0 < count < 11){
                         return{
                             ...state,
-                            thirdnonselected: count
+                            nonselectedcount: count,
+                            pageinputscount: state.first.length
                         }
-                    };
+                    } else{
+                        return{
+                            ...state,
+                            nonselectedcount: -1,
+                            pageinputscount: 0
+                        }
+                    }
                 case 4:
                     for(let i=0; i<state.fourth.length; i++){
                         if(state.first[i] === 0){count = count + 1}
@@ -131,9 +150,16 @@ export default function result(state = initiolState, action){
                     if(0 < count < 11){
                         return{
                             ...state,
-                            fourthnonselected: count
+                            nonselectedcount: count,
+                            pageinputscount: state.first.length
                         }
-                    };
+                    } else{
+                        return{
+                            ...state,
+                            nonselectedcount: -1,
+                            pageinputscount: 0
+                        }
+                    }
             }
         default:
             return state;

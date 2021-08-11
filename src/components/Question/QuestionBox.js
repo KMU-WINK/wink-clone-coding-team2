@@ -31,9 +31,7 @@ export function QuestionBox(){
                 ))}
                 </div>
             ))}
-            {/* {CheckedQuestions(inputs)}
-            {console.log(nonselectedcount)}
-            <PageBtn nonselectedcount = {nonselectedcount} inputscount = {inputscount}/> */}
+            <PageBtn page={i+1}/>
         </div>
     )
 }
