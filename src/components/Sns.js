@@ -10,6 +10,5 @@ export function Sns() {
             <a href="https://www.youtube.com/channel/UCcEr6k7Tw-uks1XxLCUi38A" target="_blank" title="공식 유튜브 페이지로 이동" className="snsbtn youtube"></a>
             <a href="https://www.instagram.com/what.is.lll/" target="_blank" title="공식 인스타그램 페이지로 이동" className="snsbtn insta"></a>
         </div>
-        <div className= "line"></div>
     </div>
 }

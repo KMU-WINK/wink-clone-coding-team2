@@ -5,9 +5,10 @@ import {Email} from './Email.js'
 
 export function Footer() {
 
-    return <>
+    return <div className="footer">
         <Sns/>
+        <div className= "line"></div>
         <Email/>
-    </>
+    </div>
 
 }

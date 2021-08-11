@@ -1,0 +1,13 @@
+.resultMain{
+    text-align: center;
+    padding-bottom: 1.5rem;
+}
+
+.resultMain img{
+    max-width: 100%;
+}
+
+.resultMain p {
+    margin: 0;
+    font-size: 0.9rem;
+}

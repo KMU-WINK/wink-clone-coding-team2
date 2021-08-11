@@ -1,0 +1,125 @@
+.resultView {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.imageResult {
+    width: 100%;
+    text-align: center;
+}
+
+.imageResult.lv1 {
+    background-color:#00e2f1;
+}
+
+.imageResult.lv2 {
+    background-color:#8ed700
+;
+}
+
+.imageResult.lv3 {
+    background-color:#febe0f;
+}
+
+.imageResult.lv4 {
+    background-color:#ff781d;
+}
+
+.imageResult.lv5 {
+    background-color:#ff352b;
+}
+
+
+
+.resultView img {
+    max-width: 30rem;
+}
+
+.resultView .txtImgSave {
+    padding-top: 1rem !important;
+    color: white;
+    font-size: 0.8rem !important;
+}
+.textLine {
+    position: relative;
+    background-color: #cbf44c;
+    content: "";
+    bottom: -0.25rem;
+}
+
+.textResult strong {
+    position: relative;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+
+.mark {
+    position: relative;
+    top: -0.25rem;
+}
+.resultShare {
+    max-width: 980px;
+    width: 80%;
+    padding: 1rem 2.5rem;
+    margin: 50px;
+    background-color: #f3f3f3;
+}
+.shareBox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.shareBox img {
+    width: 16%;
+    object-fit: contain;
+}
+
+.shareBox .desc p {
+    margin: 0;
+}
+
+.shareBox.mail {
+    border-top: 1px solid #ccc;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 1182px){
+    .shareBox.mail {
+        justify-content: start !important;
+    }
+}
+
+.shareBox .form {
+    display: flex;
+    width: 30%;
+}
+.shareBox .form input[type="text"]{
+    display: inline-block;
+    padding: 0 1rem;
+    width: 80%;
+    height: 2.5rem;
+    font-size: 0.9rem;
+    line-height: 2.5rem;
+    vertical-align: middle;
+    border: none;
+    outline: none;
+}
+
+.shareBox .form button {
+    display: inline-block;
+    width: 20%;
+    height: 2.5rem;
+    font-size: 0.9rem;
+    color: #fff;
+    background-color: #999;
+    vertical-align: middle;
+    border: none;
+
+}
