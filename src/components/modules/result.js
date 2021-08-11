@@ -9,10 +9,13 @@ const POP_RESULT = 'result/POP_RESULT'
 // 라디오를 눌렀을 때 해당 문제의 
 const UPDATE_INPUTS = 'result/UPDATE_INPUTS'
 
+const UPDATE_NONSELECTED = 'result/UPDATE_NONSELECTED'
+
 /*액션 생성함수*/
 export const pushResult = (page) => ({ type: PUSH_RESULT, page});
 export const popResult = () => ({ type: POP_RESULT});
 export const updateInputs = (index, page, value) => ({ type: UPDATE_INPUTS, index, page, value})
+export const updatenonselected = () => ({type: UPDATE_NONSELECTED})
 
 /*초기 상태*/
 const initiolState = {
@@ -21,6 +24,10 @@ const initiolState = {
     second: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     third: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     fourth: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    firstnonselected: -1,
+    secondnonselected: -1,
+    thirdnonselected: -1,
+    fourthnonselected: -1,
 }
 
 /*리듀서*/
@@ -82,9 +89,52 @@ export default function result(state = initiolState, action){
                         ...state,
                         fourth: [...state.fourth.slice(0, action.index-1), parseInt(action.value), ...state.fourth.slice(action.index, 11)]
                     };
-
             }
             console.log(state);
+        case UPDATE_NONSELECTED:
+            let count = 0;
+            switch(action.page){
+                case 1:
+                    for(let i=0; i<state.first.length; i++){
+                        if(state.first[i] === 0){count = count + 1}
+                    }
+                    if(0 < count < 11){
+                        return{
+                            ...state,
+                            firstnonselected: count
+                        }
+                    };
+                case 2:
+                    for(let i=0; i<state.second.length; i++){
+                        if(state.first[i] === 0){count = count + 1}
+                    }
+                    if(0 < count < 11){
+                        return{
+                            ...state,
+                            secondnonselected: count
+                        }
+                    };
+                case 3:
+                    for(let i=0; i<state.third.length; i++){
+                        if(state.first[i] === 0){count = count + 1}
+                    }
+                    if(0 < count < 11){
+                        return{
+                            ...state,
+                            thirdnonselected: count
+                        }
+                    };
+                case 4:
+                    for(let i=0; i<state.fourth.length; i++){
+                        if(state.first[i] === 0){count = count + 1}
+                    }
+                    if(0 < count < 11){
+                        return{
+                            ...state,
+                            fourthnonselected: count
+                        }
+                    };
+            }
         default:
             return state;
         

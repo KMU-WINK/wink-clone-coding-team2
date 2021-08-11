@@ -1,7 +1,7 @@
-import React, {useState} from "react"
+import React from "react"
 import "./PageBtn.css"
-import { useDispatch } from "react-redux";
-import { pushResult } from "./modules/result";
+import { useSelector, useDispatch } from "react-redux";
+import { pushResult, updatenonselected } from "./modules/result";
 
 // let nonselectedcount = -1;
 
@@ -29,10 +29,9 @@ function BeforePageBtn({nonselectedcount}){
     )
 }
 
-function AfterPageBtn(){
-    let page = 1;
+function AfterPageBtn(page){
     const dispatch = useDispatch();
-    const buttonClick = () => {
+    const buttonClick = (page) => {
         dispatch(pushResult(page)); // page 변수에 따라 결과가 달라짐
     };
     return(
@@ -40,21 +39,29 @@ function AfterPageBtn(){
     )
 }
 
-export function PageBtn({nonselectedcount, inputscount}){
-    console.log("pagebtn")
-    if(nonselectedcount === 0){
+export function PageBtn(page){
+    const dispatch = useDispatch();
+    dispatch(updatenonselected());
+    console.log("pagebtn");
+    var currentnonselected = -1;
+    var currentinputscount = 0;
+    if(page===1){
+        currentinputscount = useSelector(state => state.first.length)
+    }
+    if(firstnonselected === 0){
         return(
-            <div className="TestFooter"><AfterPageBtn/></div>
+            <div className="TestFooter"><AfterPageBtn page={page}/></div>
         )
     } else{
-        if(nonselectedcount !== inputscount || nonselectedcount !== -1){
+        if(firstnonselected !== firstcount || firstnonselected !== -1){
             return(
-                <div className="TestFooter"><BeforePageBtn nonselectedcount={nonselectedcount}/></div>
+                <div className="TestFooter"><BeforePageBtn nonselectedcount={firstnonselected}/></div>
             )
         }
-    }
-    console.log(nonselectedcount)
+    };
+    console.log()
 }
+
 
 PageBtn.PropTypes={
     nonselectedcount: PropTypes.number,
