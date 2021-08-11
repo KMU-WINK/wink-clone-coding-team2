@@ -6,12 +6,12 @@ import { updateInputs, updatenonselected } from "../modules/result";
 
 export function Answer({bold, answer, order, select, sendRadio}){
     const dispatch = useDispatch();
-    const page = useSelector(state => state.result.page)
+    const page = useSelector(state => state.result.page);
     const radioChange = (event) => {
         const {name, value} = event.target;
+        const tmp = name - 1;
         sendRadio(value);
-        dispatch(updateInputs(parseInt(name%11), parseInt(name/11) + 1, value));
-        console.log()
+        dispatch(updateInputs(parseInt(tmp%11), parseInt(tmp/11) + 1, value));
         dispatch(updatenonselected(page));
     }
     const t = useSelector(state => state.result.first);

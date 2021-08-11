@@ -24,14 +24,10 @@ export function PageBtn(){
     const dispatch = useDispatch();
     const page = useSelector(state => state.result.page);
     dispatch(updatenonselected(page));
-    console.log("pagebtn");
-    const nonselectedcount = useSelector(state => state.result.nonselectedcount);
-    const pageinputscount = useSelector(state => state.result.pageinputscount);
-    console.log("page:" + page);
-    console.log("non:" + nonselectedcount);
-    console.log("input:" + pageinputscount);
-    if(nonselectedcount !== pageinputscount){
-        if(nonselectedcount !== -1 && pageinputscount !== 0){
+    var nonselectedcount = useSelector(initiolState => initiolState.nonselectedcount);
+    var pageinputscount = useSelector(initiolState => initiolState.pageinputscount);
+    if(page !== 0){
+        if(nonselectedcount === 0 && pageinputscount !== 0){
             return(
                 <div className="TestFooter"><BeforePageBtn nonselectedcount={nonselectedcount}/></div>
             )

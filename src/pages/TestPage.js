@@ -9,7 +9,6 @@ import rootReducer from '../components/modules';
 import { PageBtn } from "../components/PageBtn";
 
 const store = createStore(rootReducer);
-console.log(store.getState());
 
 export function TestPage() {
     return <>
