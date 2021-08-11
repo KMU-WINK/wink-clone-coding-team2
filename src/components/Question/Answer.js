@@ -9,8 +9,9 @@ export function Answer({bold, answer, order, select, sendRadio}){
     const page = useSelector(state => state.result.page);
     const radioChange = (event) => {
         const {name, value} = event.target;
+        const tmp = name - 1;
         sendRadio(value);
-        dispatch(updateInputs(parseInt(name%11), parseInt(name/11) + 1, value));
+        dispatch(updateInputs(parseInt(tmp%11), parseInt(tmp/11) + 1, value));
         dispatch(updatenonselected(page));
     }
     return(
