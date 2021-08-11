@@ -10,6 +10,7 @@ export function Answer({bold, answer, order, select, sendRadio}){
         const {name, value} = event.target;
         sendRadio(value);
         dispatch(updateInputs(parseInt(name%11), parseInt(name/11) + 1, value));
+        
     }
     return(
         <label className="Answer">

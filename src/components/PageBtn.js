@@ -10,9 +10,8 @@ function BeforePageBtn(){
 }
 
 function AfterPageBtn(){
-    let page = 1;
     const dispatch = useDispatch();
-    const buttonClick = () => {
+    const buttonClick = (page) => {
         dispatch(pushResult(page)); // page 변수에 따라 결과가 달라짐
     };
     return(

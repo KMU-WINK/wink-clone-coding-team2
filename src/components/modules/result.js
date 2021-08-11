@@ -25,6 +25,7 @@ const initiolState = {
 
 /*리듀서*/
 export default function result(state = initiolState, action){
+    console.log(state);
     switch(action.type){
         case PUSH_RESULT:
             let chr;

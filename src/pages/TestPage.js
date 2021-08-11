@@ -9,7 +9,6 @@ import { createStore } from 'redux';
 import rootReducer from '../components/modules';
 
 const store = createStore(rootReducer);
-console.log(store.getState());
 
 export function TestPage() {
     return <>
