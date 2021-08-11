@@ -11,11 +11,14 @@ const UPDATE_INPUTS = 'result/UPDATE_INPUTS'
 
 const UPDATE_NONSELECTED = 'result/UPDATE_NONSELECTED'
 
+const UPDATE_PAGE = 'result/UPDATE_PAGE'
+
 /*액션 생성함수*/
-export const pushResult = (page) => ({ type: PUSH_RESULT, page});
+export const pushResult = () => ({ type: PUSH_RESULT});
 export const popResult = () => ({ type: POP_RESULT});
 export const updateInputs = (index, page, value) => ({ type: UPDATE_INPUTS, index, page, value})
 export const updatenonselected = (page) => ({type: UPDATE_NONSELECTED, page})
+export const updatepage = () => ({type: UPDATE_PAGE})
 
 /*초기 상태*/
 const initiolState = {
@@ -25,7 +28,7 @@ const initiolState = {
     third: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     fourth: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     nonselectedcount: -1,
-    pageinputscount: 0,
+    pageinputscount: 11,
     page: 1,
 }
 
@@ -34,7 +37,7 @@ export default function result(state = initiolState, action){
     switch(action.type){
         case PUSH_RESULT:
             let chr;
-            switch(parseInt(action.page)){
+            switch(parseInt(state.page)){
                 case 1:
                     if(state.first.reduce((stack, tmp) => {return stack+tmp}) > 22) chr = 'P';
                     else chr = 'G';
@@ -98,7 +101,7 @@ export default function result(state = initiolState, action){
                         if(state.first[i] === 0){count = count + 1}
                     }
                     console.log(count);
-                    if(0 < count < 11){
+                    if(-1 < count < 12){
                         return{
                             ...state,
                             nonselectedcount: count,
@@ -109,66 +112,97 @@ export default function result(state = initiolState, action){
                         return{
                             ...state,
                             nonselectedcount: -1,
-                            pageinputscount: 0,
-                            page:0
+                            pageinputscount: state.first.length,
+                            page:1
                         }
                     }
                 case 2:
                     for(let i=0; i<state.second.length; i++){
                         if(state.first[i] === 0){count = count + 1}
                     }
-                    if(0 < count < 11){
+                    if(-1 < count < 12){
                         return{
                             ...state,
                             nonselectedcount: count,
-                            pageinputscount: state.first.length,
+                            pageinputscount: state.second.length,
                             page:action.page
                         }
                     } else{
                         return{
                             ...state,
                             nonselectedcount: -1,
-                            pageinputscount: 0,
-                            page:0
+                            pageinputscount: state.second.length,
+                            page:2
                         }
                     }
                 case 3:
                     for(let i=0; i<state.third.length; i++){
                         if(state.first[i] === 0){count = count + 1}
                     }
-                    if(0 < count < 11){
+                    if(-1 < count < 12){
                         return{
                             ...state,
                             nonselectedcount: count,
-                            pageinputscount: state.first.length,
+                            pageinputscount: state.third.length,
                             page:action.page
                         }
                     } else{
                         return{
                             ...state,
                             nonselectedcount: -1,
-                            pageinputscount: 0,
-                            page:0
+                            pageinputscount: state.third.length,
+                            page:3
                         }
                     }
                 case 4:
                     for(let i=0; i<state.fourth.length; i++){
                         if(state.first[i] === 0){count = count + 1}
                     }
-                    if(0 < count < 11){
+                    if(-1 < count < 12){
                         return{
                             ...state,
                             nonselectedcount: count,
-                            pageinputscount: state.first.length,
+                            pageinputscount: state.fourth.length,
                             page:action.page
                         }
                     } else{
                         return{
                             ...state,
                             nonselectedcount: -1,
-                            pageinputscount: 0,
-                            page:0
+                            pageinputscount: state.fourth.length,
+                            page:4
                         }
+                    }
+            }
+        case UPDATE_PAGE:
+            switch(state.page){
+                case 1:
+                    return{
+                        ...state,
+                        page:2,
+                        nonselectedcount: -1,
+                        pageinputscount: state.second.length
+                    }
+                case 2:
+                    return{
+                        ...state,
+                        page:3,
+                        nonselectedcount: -1,
+                        pageinputscount: state.third.length
+                    }
+                case 3:
+                    return{
+                        ...state,
+                        page:4,
+                        nonselectedcount: -1,
+                        pageinputscount: state.fourth.length
+                    }
+                case 4:
+                    return{
+                        ...state,
+                        page:2,
+                        nonselectedcount: -1,
+                        pageinputscount: state.second.length
                     }
             }
         default:
