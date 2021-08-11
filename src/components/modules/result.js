@@ -25,7 +25,7 @@ const initiolState = {
     third: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     fourth: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     nonselectedcount: -1,
-    pageinputscount: 0,
+    pageinputscount: 11,
     page: 1,
 }
 
@@ -97,81 +97,81 @@ export default function result(state = initiolState, action){
                     for(let i=0; i<state.first.length; i++){
                         if(state.first[i] === 0){count = count + 1}
                     }
-                    if(0 < count < 11){
+                    console.log(count);
+                    if(-1 < count < 12){
                         return{
                             ...state,
                             nonselectedcount: count,
                             pageinputscount: state.first.length,
-                            page:action.page
+                            page: action.page
                         }
                     } else{
                         return{
                             ...state,
                             nonselectedcount: -1,
-                            pageinputscount: 0,
-                            page:0
+                            pageinputscount: 11,
+                            page:1
                         }
                     }
                 case 2:
                     for(let i=0; i<state.second.length; i++){
                         if(state.first[i] === 0){count = count + 1}
                     }
-                    if(0 < count < 11){
+                    if(-1 < count < 12){
                         return{
                             ...state,
                             nonselectedcount: count,
-                            pageinputscount: state.first.length,
-                            page:action.page
+                            pageinputscount: state.second.length,
+                            page: action.page
                         }
                     } else{
                         return{
                             ...state,
                             nonselectedcount: -1,
-                            pageinputscount: 0,
-                            page:0
+                            pageinputscount: 11,
+                            page:2
                         }
                     }
                 case 3:
                     for(let i=0; i<state.third.length; i++){
                         if(state.first[i] === 0){count = count + 1}
                     }
-                    if(0 < count < 11){
+                    if(-1 < count < 12){
                         return{
                             ...state,
                             nonselectedcount: count,
-                            pageinputscount: state.first.length,
+                            pageinputscount: state.third.length,
                             page:action.page
                         }
                     } else{
                         return{
                             ...state,
                             nonselectedcount: -1,
-                            pageinputscount: 0,
-                            page:0
+                            pageinputscount: 11,
+                            page:3
                         }
                     }
                 case 4:
                     for(let i=0; i<state.fourth.length; i++){
                         if(state.first[i] === 0){count = count + 1}
                     }
-                    if(0 < count < 11){
+                    if(-1 < count < 12){
                         return{
                             ...state,
                             nonselectedcount: count,
-                            pageinputscount: state.first.length,
+                            pageinputscount: state.fourth.length,
                             page:action.page
                         }
                     } else{
                         return{
                             ...state,
                             nonselectedcount: -1,
-                            pageinputscount: 0,
-                            page:0
+                            pageinputscount: 11,
+                            page:4
                         }
                     }
             }
         default:
             return state;
-        
     }
 }
