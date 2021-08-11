@@ -2,7 +2,8 @@ import React from "react"
 import "./QuestionBox.css"
 import {QuestionList} from "./QuestionList"
 import {QuestionFlex} from "./QuestionFlex"
-import {PageBtn} from "../PageBtn"
+// import {PageBtn} from "../PageBtn"
+import { useSelector } from "react-redux"
 
 function Question({quest, order}){
     return(
@@ -31,7 +32,8 @@ export function QuestionBox(){
                 ))}
                 </div>
             ))}
-            <PageBtn page={i+1}/>
+            {/* <PageBtn/> */}
+            {/* {console.log(useSelector(initiolState=>initiolState.first))} */}
         </div>
     )
 }

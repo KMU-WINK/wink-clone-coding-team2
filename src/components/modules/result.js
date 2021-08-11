@@ -26,6 +26,7 @@ const initiolState = {
     fourth: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     nonselectedcount: -1,
     pageinputscount: 0,
+    page: 1,
 }
 
 /*리듀서*/
@@ -100,13 +101,15 @@ export default function result(state = initiolState, action){
                         return{
                             ...state,
                             nonselectedcount: count,
-                            pageinputscount: state.first.length
+                            pageinputscount: state.first.length,
+                            page:action.page
                         }
                     } else{
                         return{
                             ...state,
                             nonselectedcount: -1,
-                            pageinputscount: 0
+                            pageinputscount: 0,
+                            page:0
                         }
                     }
                 case 2:
@@ -117,13 +120,15 @@ export default function result(state = initiolState, action){
                         return{
                             ...state,
                             nonselectedcount: count,
-                            pageinputscount: state.first.length
+                            pageinputscount: state.first.length,
+                            page:action.page
                         }
                     } else{
                         return{
                             ...state,
                             nonselectedcount: -1,
-                            pageinputscount: 0
+                            pageinputscount: 0,
+                            page:0
                         }
                     }
                 case 3:
@@ -134,13 +139,15 @@ export default function result(state = initiolState, action){
                         return{
                             ...state,
                             nonselectedcount: count,
-                            pageinputscount: state.first.length
+                            pageinputscount: state.first.length,
+                            page:action.page
                         }
                     } else{
                         return{
                             ...state,
                             nonselectedcount: -1,
-                            pageinputscount: 0
+                            pageinputscount: 0,
+                            page:0
                         }
                     }
                 case 4:
@@ -151,13 +158,15 @@ export default function result(state = initiolState, action){
                         return{
                             ...state,
                             nonselectedcount: count,
-                            pageinputscount: state.first.length
+                            pageinputscount: state.first.length,
+                            page:action.page
                         }
                     } else{
                         return{
                             ...state,
                             nonselectedcount: -1,
-                            pageinputscount: 0
+                            pageinputscount: 0,
+                            page:0
                         }
                     }
             }
