@@ -13,9 +13,8 @@ export function Answer({bold, answer, order, select, sendRadio}){
         sendRadio(value);
         dispatch(updateInputs(parseInt(tmp%11), parseInt(tmp/11) + 1, value));
         dispatch(updatenonselected(page));
-
-//         let current = document.getElementById(`${order}`);
-//         current.scrollIntoView({behavior:'smooth'});
+        let current = document.getElementById(`${order}`);
+        current.scrollIntoView({behavior:'smooth'});
     }
     return(
         <label className="Answer" id={order}>
