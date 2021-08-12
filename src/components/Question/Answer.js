@@ -3,7 +3,6 @@ import "./Answer.css"
 import { useSelector, useDispatch } from "react-redux";
 import { updateInputs, updatenonselected } from "../modules/result";
 
-
 export function Answer({bold, answer, order, select, sendRadio}){
     const dispatch = useDispatch();
     const page = useSelector(state => state.result.page);
