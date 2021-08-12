@@ -2,14 +2,13 @@ import React from "react";
 import { TestControl } from "../components/TestControl";
 import {TestTitle} from "../components/TestTitle";
 import {QuestionBox} from "../components/Question/QuestionBox";
-import {PageBtn} from "../components/PageBtn";
 // redux
-import { Provider } from 'react-redux'
+import { Provider, useSelector } from 'react-redux'
 import { createStore } from 'redux';
 import rootReducer from '../components/modules';
+import { PageBtn } from "../components/PageBtn";
 
 const store = createStore(rootReducer);
-console.log(store.getState());
 
 export function TestPage() {
     return <>
@@ -20,5 +19,4 @@ export function TestPage() {
         <PageBtn/>
     </Provider>
     </>
-
 }
