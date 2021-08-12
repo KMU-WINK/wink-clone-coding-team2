@@ -1,64 +1,61 @@
-import React, {useState} from "react"
+import React from "react"
 import "./PageBtn.css"
-import { useDispatch } from "react-redux";
-import { pushResult } from "./modules/result";
+import { useSelector, useDispatch } from "react-redux";
+import { pushResult, updatenonselected, updatepage } from "./modules/result";
+import PropTypes from 'prop-types';
 
-function BeforePageBtn(){
+function BeforePageBtn({nonselectedcount}){
     return(
-        <a className = "BeforePageBtn">11개의 항목이 남았습니다.</a>
+        <div className = "BeforePageBtn">{nonselectedcount}개의 항목이 남았습니다.</div>
     )
 }
 
 function AfterPageBtn(){
     const dispatch = useDispatch();
+  //
     const buttonClick = (page) => {
         dispatch(pushResult(page)); // page 변수에 따라 결과가 달라짐
+//     const buttonClick = () => {
+//         dispatch(pushResult()); // page 변수에 따라 결과가 달라짐
+//         dispatch(updatepage());
     };
     return(
-        <a className = "AfterPageBtn" value="1" onClick={buttonClick}>다음 설문 진행하기 →</a>
+        <div className = "AfterPageBtn" value="1" onClick={buttonClick}>다음 설문 진행하기 →</div>
     )
 }
 
 export function PageBtn(){
-    return(
-        <div className="TestFooter"><AfterPageBtn/></div>
-    )
+    const dispatch = useDispatch();
+    const page = useSelector(state => state.result.page);
+    dispatch(updatenonselected(page));
+    console.log("pagebtn");
+    const nonselectedcount = useSelector(state => state.result.nonselectedcount);
+    const pageinputscount = useSelector(state => state.result.pageinputscount);
+    console.log("page:" + page);
+    console.log("non:" + nonselectedcount);
+    console.log("input:" + pageinputscount);
+    if(nonselectedcount !== pageinputscount && nonselectedcount !== -1){
+        if(nonselectedcount !== 0 && pageinputscount !== 0){
+            return(
+                <div className="TestFooter"><BeforePageBtn nonselectedcount={nonselectedcount}/></div>
+            )
+        }else if(nonselectedcount === 0){
+            return(
+                <div className="TestFooter"><AfterPageBtn/></div>
+            )
+        }
+    } else{
+        return(
+            <div></div>
+        )
+    }
 }
 
 
-// const selectedcount = 0;
-// const page = 0;
-// const nonselectedcount = 0;
-
-// function CheckedQuestions(){
-//     if(page==0){
-//         for(let i =0; i<11; i++){
-//             if(버튼 체크확인 조건문) selectedcount = selectedcount + 1;
-//         }
-//     }
+// PageBtn.PropTypes={
+//     page: PropTypes.number,
 // }
 
-// function RemainingQuestions(){
-//     CheckedQuestions();
-//     if(page!=3){
-//         nonselectedcount = 11-selectedcount;
-//         return(<span>{nonselectedcount}</span>
-//         )
-//     } else{
-//         nonselectedcount = 10-selectedcount;
-//         return(<span>{nonselectedcount}</span>
-//         )
-//     }
-// }
-
-// export function PageBtn(){
-//     if(nonselectedcount != 0){
-//         return(
-//             <div className="TestFooter"><AfterPageBtn/></div>
-//         )
-//     } else{
-//         return(
-//             <div className="TestFooter"><BeforePageBtn/></div>
-//         )
-//     }
+// BeforePageBtn.prototype={
+//     nonselectedcount: PropTypes.number
 // }

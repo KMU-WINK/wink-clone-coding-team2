@@ -2,6 +2,7 @@ import React from "react"
 import "./QuestionBox.css"
 import {QuestionList} from "./QuestionList"
 import {QuestionFlex} from "./QuestionFlex"
+import { useSelector } from "react-redux"
 
 function Question({quest, order}){
     return(
@@ -16,21 +17,137 @@ function Question({quest, order}){
     )
 }
 
+// style={page === 0 ? {display: "inline-block"} : {display: "none"}}
+
 export function QuestionBox(){
-    
-    return(
-        <div className="PageWrap">
-            {QuestionList.map((questbox, i) => (
-                <div className="QuestionBox" style={i === 0 ? {display: "inline-block"} : {display: "none"}}>
-                    {questbox.map((quest, index) => (
+    const page = useSelector(state => state.result.page);
+    // if(page === 1){
+    //     return(
+    //         <div className="PageWrap">
+    //             <div className="QuestionBox">
+    //                 {QuestionFirstList.map((quest, index) => (
+    //                 <Question 
+    //                 quest={quest} 
+    //                 order={index+1} 
+    //                 page = {page}
+    //                 key={index}
+    //                 />
+    //             ))}
+    //             </div>
+    //         </div>
+    //     )
+    // } else if(page === 2){
+    //     return(
+    //         <div className="PageWrap">
+    //             <div className="QuestionBox">
+    //                 {QuestionSecondList.map((quest, index) => (
+    //                 <Question 
+    //                 quest={quest} 
+    //                 order={index+1} 
+    //                 page = {page}
+    //                 key={index}
+    //                 />
+    //             ))}
+    //             </div>
+    //         </div>
+    //     )
+    // } else if(page === 3){
+    //     return(
+    //         <div className="PageWrap">
+    //             <div className="QuestionBox">
+    //                 {QuestionThirdList.map((quest, index) => (
+    //                 <Question 
+    //                 quest={quest} 
+    //                 order={index+1} 
+    //                 page = {page}
+    //                 key={index}
+    //                 />
+    //             ))}
+    //             </div>
+    //         </div>
+    //     )
+    // } else if(page === 4){
+    //     return(
+    //         <div className="PageWrap">
+    //             <div className="QuestionBox">
+    //                 {QuestionFourthList.map((quest, index) => (
+    //                 <Question 
+    //                 quest={quest} 
+    //                 order={index+1} 
+    //                 page = {page}
+    //                 key={index}
+    //                 />
+    //             ))}
+    //             </div>
+    //         </div>
+    //     )
+    // }
+    if(page === 1){
+        return(
+            <div className="PageWrap">
+                <div className="QuestionBox" style={page === 1 ? {display: "inline-block"} : {display: "none"}}>
+                    {QuestionList[page-1].map((quest, index) => (
                     <Question 
                     quest={quest} 
-                    order={i*11 + index+1} 
+                    order={(page-1)*11 + index+1} 
                     key={index}
                     />
                 ))}
                 </div>
-            ))}
-        </div>
-    )
+            </div>
+        )
+    } else if(page === 2){
+        return(
+            <div className="PageWrap">
+                <div className="QuestionBox" style={page === 2 ? {display: "inline-block"} : {display: "none"}}>
+                    {QuestionList[page-1].map((quest, index) => (
+                    <Question 
+                    quest={quest} 
+                    order={(page-1)*11 + index+1} 
+                    key={index}
+                    />
+                ))}
+                </div>
+            </div>
+        )
+    } else if(page === 3){
+        return(
+            <div className="PageWrap">
+                <div className="QuestionBox" style={page === 3 ? {display: "inline-block"} : {display: "none"}}>
+                    {QuestionList[page-1].map((quest, index) => (
+                    <Question 
+                    quest={quest} 
+                    order={(page-1)*11 + index+1} 
+                    key={index}
+                    />
+                ))}
+                </div>
+            </div>
+        )
+    } else if(page === 4){
+        return(
+            <div className="PageWrap">
+                <div className="QuestionBox" style={page === 4 ? {display: "inline-block"} : {display: "none"}}>
+                    {QuestionList[page-1].map((quest, index) => (
+                    <Question 
+                    quest={quest} 
+                    order={(page-1)*11 + index+1} 
+                    key={index}
+                    />
+                ))}
+                </div>
+            </div>
+        )
+    }
+    //         <div className="QuestionBox" style={page === 0 ? {display: "inline-block"} : {display: "none"}}>
+    //             {questbox.map((quest, index) => (
+    //             <Question 
+    //             quest={quest} 
+    //             order={i*11 + index+1} 
+    //             key={index}
+    //             />
+    //         ))}
+    //         </div>
+    //     </div>
+    // )
 }

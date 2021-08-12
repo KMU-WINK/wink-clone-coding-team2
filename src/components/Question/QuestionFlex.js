@@ -4,6 +4,7 @@ import {Answer} from "./Answer"
 
 export function QuestionFlex({bold, answer, order}){
     const [Radio, setRadio] = useState(null);
+    console.log(Radio);
     return(
         <div className="QuestionFlex">
             {[0, 1, 2, 3].map((i) => (
@@ -15,7 +16,6 @@ export function QuestionFlex({bold, answer, order}){
                 sendRadio={setRadio}
                 />
             ))}
-            
         </div>
     )
 }
