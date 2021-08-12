@@ -12,13 +12,11 @@ export function Answer({bold, answer, order, select, sendRadio}){
         const tmp = name - 1;
         sendRadio(value);
         dispatch(updateInputs(parseInt(tmp%11), parseInt(tmp/11) + 1, value));
-//         dispatch(updatenonselected(page));
+        dispatch(updatenonselected(page));
 
 //         let current = document.getElementById(`${order}`);
 //         current.scrollIntoView({behavior:'smooth'});
     }
-    const t = useSelector(state => state.result.first);
-    console.log(t);
     return(
         <label className="Answer" id={order}>
             <input type="radio" name={order} value={select} onChange={(e) => radioChange(e)}></input>

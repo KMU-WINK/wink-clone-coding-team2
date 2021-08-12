@@ -2,7 +2,6 @@ import React from "react"
 import "./PageBtn.css"
 import { useSelector, useDispatch } from "react-redux";
 import { pushResult, updatenonselected, updatepage } from "./modules/result";
-import PropTypes from 'prop-types';
 
 function BeforePageBtn({nonselectedcount}){
     return(
@@ -12,12 +11,9 @@ function BeforePageBtn({nonselectedcount}){
 
 function AfterPageBtn(){
     const dispatch = useDispatch();
-  //
-    const buttonClick = (page) => {
-        dispatch(pushResult(page)); // page 변수에 따라 결과가 달라짐
-//     const buttonClick = () => {
-//         dispatch(pushResult()); // page 변수에 따라 결과가 달라짐
-//         dispatch(updatepage());
+    const buttonClick = () => {
+        dispatch(pushResult()); // page 변수에 따라 결과가 달라짐
+        dispatch(updatepage());
     };
     return(
         <div className = "AfterPageBtn" value="1" onClick={buttonClick}>다음 설문 진행하기 →</div>
@@ -50,12 +46,3 @@ export function PageBtn(){
         )
     }
 }
-
-
-// PageBtn.PropTypes={
-//     page: PropTypes.number,
-// }
-
-// BeforePageBtn.prototype={
-//     nonselectedcount: PropTypes.number
-// }
