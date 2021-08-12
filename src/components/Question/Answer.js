@@ -12,8 +12,11 @@ export function Answer({bold, answer, order, select, sendRadio}){
         const tmp = name - 1;
         sendRadio(value);
       //
-        dispatch(updateInputs(parseInt(tmp%11), parseInt(tmp/11) + 1, value));
-        dispatch(updatenonselected(page));
+        dispatch(updateInputs(parseInt(name%11), parseInt(name/11) + 1, value));
+        
+      //
+//         dispatch(updateInputs(parseInt(tmp%11), parseInt(tmp/11) + 1, value));
+//         dispatch(updatenonselected(page));
       //
 //         dispatch(updateInputs(parseInt(name%11), parseInt(name/11) + 1, value));
 //         let current = document.getElementById(`${order}`);

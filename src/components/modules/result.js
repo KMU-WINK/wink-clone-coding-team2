@@ -34,6 +34,7 @@ const initiolState = {
 
 /*리듀서*/
 export default function result(state = initiolState, action){
+    console.log(state);
     switch(action.type){
         case PUSH_RESULT:
             let chr;
@@ -74,22 +75,26 @@ export default function result(state = initiolState, action){
                 case 1:
                     return{
                         ...state,
-                        first: [...state.first.slice(0, action.index), parseInt(action.value), ...state.first.slice(action.index+1, 11)]
+                        first: [...state.first.slice(0, action.index-1), parseInt(action.value), ...state.first.slice(action.index, 12)]
+
                     };
                 case 2:
                     return{
                         ...state,
-                        second: [...state.second.slice(0, action.index), parseInt(action.value), ...state.second.slice(action.index+1, 12)]
+                        second: [...state.second.slice(0, action.index-1), parseInt(action.value), ...state.second.slice(action.index, 12)]
+
                     };
                 case 3:
                     return{
                         ...state,
-                        third: [...state.third.slice(0, action.index), parseInt(action.value), ...state.third.slice(action.index+1, 12)]
+                        third: [...state.third.slice(0, action.index-1), parseInt(action.value), ...state.third.slice(action.index, 12)]
+
                     };
                 case 4:
                     return{
                         ...state,
-                        fourth: [...state.fourth.slice(0, action.index), parseInt(action.value), ...state.fourth.slice(action.index+1, 12)]
+                      fourth: [...state.fourth.slice(0, action.index-1), parseInt(action.value), ...state.fourth.slice(action.index, 12)]
+
                     };
             }
         case UPDATE_NONSELECTED:

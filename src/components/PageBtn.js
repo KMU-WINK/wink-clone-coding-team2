@@ -12,9 +12,12 @@ function BeforePageBtn({nonselectedcount}){
 
 function AfterPageBtn(){
     const dispatch = useDispatch();
-    const buttonClick = () => {
-        dispatch(pushResult()); // page 변수에 따라 결과가 달라짐
-        dispatch(updatepage());
+  //
+    const buttonClick = (page) => {
+        dispatch(pushResult(page)); // page 변수에 따라 결과가 달라짐
+//     const buttonClick = () => {
+//         dispatch(pushResult()); // page 변수에 따라 결과가 달라짐
+//         dispatch(updatepage());
     };
     return(
         <div className = "AfterPageBtn" value="1" onClick={buttonClick}>다음 설문 진행하기 →</div>
