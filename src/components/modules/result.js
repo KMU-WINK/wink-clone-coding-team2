@@ -26,7 +26,7 @@ const initiolState = {
     first: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     second: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     third: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    fourth: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    fourth: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     nonselectedcount: -1,
     pageinputscount: 11,
     page: 1,
@@ -95,7 +95,7 @@ export default function result(state = initiolState, action){
         case UPDATE_NONSELECTED:
             console.log(state);
             let count = 0;
-            switch(action.page){
+            switch(state.page){
                 case 1:
                     for(let i=0; i<state.first.length; i++){
                         if(state.first[i] === 0){count = count + 1}
@@ -118,7 +118,7 @@ export default function result(state = initiolState, action){
                     }
                 case 2:
                     for(let i=0; i<state.second.length; i++){
-                        if(state.first[i] === 0){count = count + 1}
+                        if(state.second[i] === 0){count = count + 1}
                     }
                     if(-1 < count < 12){
                         return{
@@ -137,7 +137,7 @@ export default function result(state = initiolState, action){
                     }
                 case 3:
                     for(let i=0; i<state.third.length; i++){
-                        if(state.first[i] === 0){count = count + 1}
+                        if(state.third[i] === 0){count = count + 1}
                     }
                     if(-1 < count < 12){
                         return{
@@ -156,7 +156,7 @@ export default function result(state = initiolState, action){
                     }
                 case 4:
                     for(let i=0; i<state.fourth.length; i++){
-                        if(state.first[i] === 0){count = count + 1}
+                        if(state.fourth[i] === 0){count = count + 1}
                     }
                     if(-1 < count < 12){
                         return{
@@ -197,13 +197,13 @@ export default function result(state = initiolState, action){
                         nonselectedcount: -1,
                         pageinputscount: state.fourth.length
                     }
-                case 4:
-                    return{
-                        ...state,
-                        page:2,
-                        nonselectedcount: -1,
-                        pageinputscount: state.second.length
-                    }
+                // case 4:
+                //     return{
+                //         ...state,
+                //         page:2,
+                //         nonselectedcount: -1,
+                //         pageinputscount: state.second.length
+                //     }
             }
         default:
             return state;

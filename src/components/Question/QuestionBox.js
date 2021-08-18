@@ -3,6 +3,8 @@ import "./QuestionBox.css"
 import {QuestionList} from "./QuestionList"
 import {QuestionFlex} from "./QuestionFlex"
 import { useSelector } from "react-redux"
+import { TestControl } from "../TestControl"
+import { PageBtn } from "../PageBtn"
 
 function Question({quest, order}){
     return(
@@ -21,61 +23,49 @@ function Question({quest, order}){
 
 export function QuestionBox(){
     const page = useSelector(state => state.result.page);
-    if(page === 1){
-        return(
-            <div className="PageWrap">
-                <div className="QuestionBox" style={page === 1 ? {display: "inline-block"} : {display: "none"}}>
-                    {QuestionList[page-1].map((quest, index) => (
+    return(
+        <div className="PageWrap">
+            <TestControl page={page}/>
+            <div className="QuestionBox" style={page === 1 ? {display: "inline-block"} : {display: "none"}}>
+                {QuestionList[page-1].map((quest, index) => (
                     <Question 
                     quest={quest} 
                     order={(page-1)*11 + index+1} 
                     key={index}
                     />
                 ))}
-                </div>
+                <PageBtn/>
             </div>
-        )
-    } else if(page === 2){
-        return(
-            <div className="PageWrap">
-                <div className="QuestionBox" style={page === 2 ? {display: "inline-block"} : {display: "none"}}>
-                    {QuestionList[page-1].map((quest, index) => (
+            <div className="QuestionBox" style={page === 2 ? {display: "inline-block"} : {display: "none"}}>
+                {QuestionList[page-1].map((quest, index) => (
                     <Question 
                     quest={quest} 
                     order={(page-1)*11 + index+1} 
                     key={index}
                     />
                 ))}
-                </div>
+                <PageBtn/>
             </div>
-        )
-    } else if(page === 3){
-        return(
-            <div className="PageWrap">
-                <div className="QuestionBox" style={page === 3 ? {display: "inline-block"} : {display: "none"}}>
-                    {QuestionList[page-1].map((quest, index) => (
+            <div className="QuestionBox" style={page === 3 ? {display: "inline-block"} : {display: "none"}}>
+                {QuestionList[page-1].map((quest, index) => (
                     <Question 
                     quest={quest} 
                     order={(page-1)*11 + index+1} 
                     key={index}
                     />
                 ))}
-                </div>
+                <PageBtn/>
             </div>
-        )
-    } else if(page === 4){
-        return(
-            <div className="PageWrap">
-                <div className="QuestionBox" style={page === 4 ? {display: "inline-block"} : {display: "none"}}>
-                    {QuestionList[page-1].map((quest, index) => (
+            <div className="QuestionBox" style={page === 4 ? {display: "inline-block"} : {display: "none"}}>
+                {QuestionList[page-1].map((quest, index) => (
                     <Question 
                     quest={quest} 
                     order={(page-1)*11 + index+1} 
                     key={index}
                     />
                 ))}
-                </div>
+                <PageBtn/>
             </div>
-        )
-    }
+        </div>
+    )
 }

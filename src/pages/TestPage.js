@@ -14,9 +14,8 @@ export function TestPage() {
     return <>
     <Provider store={store}>
         <TestTitle/>
-        <TestControl page="1"/>
+        {/* <TestControl page="1"/> */}
         <QuestionBox/>
-        <PageBtn/>
     </Provider>
     </>
 }
