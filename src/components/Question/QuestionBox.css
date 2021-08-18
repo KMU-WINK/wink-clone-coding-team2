@@ -25,3 +25,11 @@
 .QuestionBox .Question .text > b{
     font-weight: bolder;
 }
+.mentimg{
+    padding-bottom: 1.75rem;
+    text-align: center;
+    border-bottom: 1px solid #7f7f7f;
+}
+.mentimg img{
+    height: 2rem;
+}
