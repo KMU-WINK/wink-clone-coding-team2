@@ -23,8 +23,8 @@ export function QuestionBox(){
     const page = useSelector(state => state.result.page);
     return(
         <div className="PageWrap">
-            <TestControl page={page}/>
             <div className="QuestionBox" style={page === 1 ? {display: "inline-block"} : {display: "none"}}>
+                <TestControl page={page}/>
                 {QuestionList[page-1].map((quest, index) => (
                     <Question 
                     quest={quest} 
@@ -35,6 +35,7 @@ export function QuestionBox(){
                 <PageBtn/>
             </div>
             <div className="QuestionBox" style={page === 2 ? {display: "inline-block"} : {display: "none"}}>
+                <TestControl page={page}/>
                 <div className="mentimg">
                     <img src="https://www.lllkkdti.com/content/images/test/test-step-ment-01.png"></img>
                 </div>
@@ -48,6 +49,7 @@ export function QuestionBox(){
                 <PageBtn/>
             </div>
             <div className="QuestionBox" style={page === 3 ? {display: "inline-block"} : {display: "none"}}>
+                <TestControl page={page}/>
                 <div className="mentimg">
                     <img src="https://www.lllkkdti.com/content/images/test/test-step-ment-02.png"></img>
                 </div>
@@ -61,6 +63,7 @@ export function QuestionBox(){
                 <PageBtn/>
             </div>
             <div className="QuestionBox" style={page === 4 ? {display: "inline-block"} : {display: "none"}}>
+                <TestControl page={page}/>
                 <div className="mentimg">
                     <img src="https://www.lllkkdti.com/content/images/test/test-step-ment-03.png"></img>
                 </div>

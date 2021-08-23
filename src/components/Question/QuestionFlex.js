@@ -1,9 +1,6 @@
 import React from "react"
 import "./QuestionFlex.css"
 import {Answer , Answer2, Answer3, Answer4} from "./Answer"
-// import { Answer2 } from "./Answer2";
-// import { Answer3 } from "./Answer3";
-// import { Answer4 } from "./Answer4";
 import { useSelector } from "react-redux";
 
 export function QuestionFlex({bold, answer, order}){
