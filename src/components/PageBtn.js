@@ -11,13 +11,23 @@ function BeforePageBtn({nonselectedcount}){
 
 function AfterPageBtn(){
     const dispatch = useDispatch();
-    const buttonClick = () => {
+    const page = useSelector(state => state.result.page);
+    const buttonClick1 = () => {
         dispatch(pushResult()); // page 변수에 따라 결과가 달라짐
         dispatch(updatepage());
     };
-    return(
-        <div className = "AfterPageBtn" value="1" onClick={buttonClick}>다음 설문 진행하기 →</div>
-    )
+    const buttonClick2 = () => {
+        dispatch(pushResult());
+    };
+    if(page === 4){
+        return(
+            <a harf = "/result" className = "AfterPageBtn" onClick={buttonClick2}>다음 설문 진행하기 →</a>
+        )
+    }else{
+        return(
+            <div className = "AfterPageBtn" onClick={buttonClick1}>다음 설문 진행하기 →</div>
+        )
+    }
 }
 
 export function PageBtn(){
@@ -28,8 +38,7 @@ export function PageBtn(){
     const nonselectedcount = useSelector(state => state.result.nonselectedcount);
     const pageinputscount = useSelector(state => state.result.pageinputscount);
     console.log("page:" + page);
-    console.log("non:" + nonselectedcount);
-    console.log("input:" + pageinputscount);
+    
     if(nonselectedcount !== pageinputscount && nonselectedcount !== -1){
         if(nonselectedcount !== 0 && pageinputscount !== 0){
             return(
