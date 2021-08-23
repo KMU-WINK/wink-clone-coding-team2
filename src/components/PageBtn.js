@@ -16,6 +16,7 @@ function AfterPageBtn(){
     const buttonClick1 = () => {
         dispatch(pushResult()); // page 변수에 따라 결과가 달라짐
         dispatch(updatepage());
+        window.scrollTo({top:0, behavior:'smooth'});
     };
     const re = useSelector(state => state.result.result);
     useEffect(() => {
@@ -23,6 +24,7 @@ function AfterPageBtn(){
     }, [re]);
     const buttonClick2 = () => {
         dispatch(pushResult());
+        window.scrollTo({top:0, behavior:'smooth'});
     };
     if(page === 4){
         return(
