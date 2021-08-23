@@ -9,7 +9,7 @@ export function TestControl(props) {
                 <a href="/" title="이전 페이지로 돌아가기" className="backbtn">
                     <img src="https://www.lllkkdti.com/content/images/test/test-back-btn.png" alt="뒤로"/>
                 </a>
-                <p class="test-step">
+                <p className="test-step">
                     꼰대성향 검사 (43문) : 
                     <strong className="current-step">
                         <span>{props.page}</span>

@@ -1,6 +1,7 @@
-import React from "react"
+import React, { useEffect } from "react"
 import "./PageBtn.css"
 import { useSelector, useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 import { pushResult, updatenonselected, updatepage } from "./modules/result";
 
 function BeforePageBtn({nonselectedcount}){
@@ -16,12 +17,16 @@ function AfterPageBtn(){
         dispatch(pushResult()); // page 변수에 따라 결과가 달라짐
         dispatch(updatepage());
     };
+    const re = useSelector(state => state.result.result);
+    useEffect(() => {
+        console.log(re);
+    }, [re]);
     const buttonClick2 = () => {
         dispatch(pushResult());
     };
     if(page === 4){
         return(
-            <a harf = "/result" className = "AfterPageBtn" onClick={buttonClick2}>다음 설문 진행하기 →</a>
+            <a href={"/Test/Result?tmp="+re} className = "AfterPageBtn" onClick={buttonClick2}>검사 결과 보러 가기 →</a>
         )
     }else{
         return(

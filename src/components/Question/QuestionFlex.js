@@ -17,6 +17,7 @@ export function QuestionFlex({bold, answer, order}){
                     answer={answer[i]} 
                     order={order} 
                     select={i+1}
+                    key={i}
                     />
                 ))}
             </div>
@@ -30,6 +31,7 @@ export function QuestionFlex({bold, answer, order}){
                     answer={answer[i]} 
                     order={order} 
                     select={i+1}
+                    key={i}
                     />
                 ))}
             </div>
@@ -43,6 +45,7 @@ export function QuestionFlex({bold, answer, order}){
                     answer={answer[i]} 
                     order={order} 
                     select={i+1}
+                    key={i}
                     />
                 ))}
             </div>
@@ -56,6 +59,7 @@ export function QuestionFlex({bold, answer, order}){
                     answer={answer[i]} 
                     order={order} 
                     select={i+1}
+                    key={i}
                     />
                 ))}
             </div>

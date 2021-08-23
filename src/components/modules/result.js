@@ -47,17 +47,17 @@ export default function result(state = initiolState, action){
                     else chr = 'E';
                     break;
                 case 3:
-                    if(state.first.reduce((stack, tmp) => {return stack+tmp}) > 22) chr = 'C';
+                    if(state.third.reduce((stack, tmp) => {return stack+tmp}) > 22) chr = 'C';
                     else chr = 'A';
                     break;
                 case 4:
-                    let sums = state.first.reduce((stack, tmp) => {return stack+tmp});
+                    let sums = state.fourth.reduce((stack, tmp) => {return stack+tmp});
                     if(sums > 35) chr = '5';
                     else if(sums > 29) chr = '4';
                     else if(sums > 23) chr = '3';
                     else if(sums > 17) chr = '2';
-                    else if(sums > 10) chr = '1';
-                    else chr = '?';
+                    else chr = '1';
+                    
                 }
             console.log(chr);
             return{
