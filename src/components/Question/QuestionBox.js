@@ -28,7 +28,7 @@ export function QuestionBox(){
                 {QuestionList[page-1].map((quest, index) => (
                     <Question 
                     quest={quest} 
-                    order={(page-1)*11 + index+1} 
+                    order={index+1} 
                     key={index}
                     />
                 ))}
@@ -41,7 +41,7 @@ export function QuestionBox(){
                 {QuestionList[page-1].map((quest, index) => (
                     <Question 
                     quest={quest} 
-                    order={(page-1)*11 + index+1} 
+                    order={11 + index+1} 
                     key={index}
                     />
                 ))}
@@ -54,7 +54,7 @@ export function QuestionBox(){
                 {QuestionList[page-1].map((quest, index) => (
                     <Question 
                     quest={quest} 
-                    order={(page-1)*11 + index+1} 
+                    order={22 + index+1} 
                     key={index}
                     />
                 ))}
@@ -67,7 +67,7 @@ export function QuestionBox(){
                 {QuestionList[page-1].map((quest, index) => (
                     <Question 
                     quest={quest} 
-                    order={(page-1)*11 + index+1} 
+                    order={33 + index+1} 
                     key={index}
                     />
                 ))}
