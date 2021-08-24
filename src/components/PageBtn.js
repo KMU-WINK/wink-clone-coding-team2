@@ -12,17 +12,18 @@ function BeforePageBtn({nonselectedcount}){
 
 function AfterPageBtn(){
     const dispatch = useDispatch();
-    const page = useSelector(state => state.result.page);
+    const page = useSelector(state => state.result.page);    
     const buttonClick1 = () => {
         dispatch(pushResult()); // page 변수에 따라 결과가 달라짐
         dispatch(updatepage());
-        window.scrollTo({top:0, behavior:'smooth'});
+        //window.scrollTo({top:0, behavior:'smooth'});
         console.log(page);
     };
     const re = useSelector(state => state.result.result);
     useEffect(() => {
         console.log(re);
     }, [re]);
+    
     const buttonClick2 = () => {
         dispatch(pushResult());
         window.scrollTo({top:0, behavior:'smooth'});

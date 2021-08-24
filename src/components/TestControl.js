@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import "./TestControl.css"
 import { useDispatch, useSelector } from "react-redux"
 import { backpage } from "./modules/result"
@@ -9,13 +9,22 @@ function Back() {
     const buttonclick = () =>{
         dispatch(backpage());
     }
-    if(page === 1){
+    let tmp = true;
+    useEffect(() => {
+        if(page === 1){
+            tmp = true;
+        }
+        else{
+            tmp = false;
+        }
+    }, [page]);
+    if(tmp === true){
         return(
             <a href="/" title="이전 페이지로 돌아가기" className="backbtn">
                 <img src="https://www.lllkkdti.com/content/images/test/test-back-btn.png" alt="뒤로"/>
             </a>
         )
-    } else if(page > 1){
+    } else{
         return(
             <div title="이전 페이지로 돌아가기" className="backbtn" onClick = {buttonclick()}>
                 <img src="https://www.lllkkdti.com/content/images/test/test-back-btn.png" alt="뒤로"/>
