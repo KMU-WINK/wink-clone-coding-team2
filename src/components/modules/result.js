@@ -13,12 +13,15 @@ const UPDATE_NONSELECTED = 'result/UPDATE_NONSELECTED'
 
 const UPDATE_PAGE = 'result/UPDATE_PAGE'
 
+const BACK_PAGE = 'result/BACK_PAGE'
+
 /*액션 생성함수*/
 export const pushResult = () => ({ type: PUSH_RESULT});
 export const popResult = () => ({ type: POP_RESULT});
 export const updateInputs = (index, page, value) => ({ type: UPDATE_INPUTS, index, page, value})
 export const updatenonselected = (page) => ({type: UPDATE_NONSELECTED, page})
 export const updatepage = () => ({type: UPDATE_PAGE})
+export const backpage = () => ({type: BACK_PAGE})
 
 /*초기 상태*/
 const initiolState = {
@@ -197,13 +200,24 @@ export default function result(state = initiolState, action){
                         nonselectedcount: -1,
                         pageinputscount: state.fourth.length
                     }
-                // case 4:
-                //     return{
-                //         ...state,
-                //         page:2,
-                //         nonselectedcount: -1,
-                //         pageinputscount: state.second.length
-                //     }
+                }
+        case BACK_PAGE:
+            switch(state.page){
+                case 2:
+                    return{
+                        ...state,
+                        page:1
+                    }
+                case 3:
+                    return{
+                        ...state,
+                        page:2
+                    }
+                case 4:
+                    return{
+                        ...state,
+                        page:3
+                    }
             }
         default:
             return state;
